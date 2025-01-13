@@ -1,0 +1,493 @@
+.contact
+    margin-left: calc(30 * var(--px1))
+    padding-top: calc(27 * var(--px1))
+    padding-left: calc(15 * var(--px1))
+    padding-right: calc(15 * var(--px1))
+    border: calc(var(--px1)) solid transparent
+    position: relative
+    &-current
+        display: flex
+        line-height: calc(var(--px1) * 30)
+        cursor: pointer
+        user-select: none
+        span
+            font-size: calc(var(--px1) * 14)
+            margin-top: auto
+            margin-bottom: auto
+        svg
+            width: calc(var(--px1) * 10)
+            height: calc(var(--px1) * 10)
+            margin-top: auto
+            margin-bottom: auto
+            margin-left: calc(var(--px1) * 5)
+
+        &:hover
+            span
+                color: $accent
+
+    &.open
+        border: calc(var(--px1)) solid transparent
+        border-top: 0
+        border-bottom: 0
+        position: relative
+        &:before
+            content: ''
+            display: block
+            width: calc(var(--px1))
+            height: 100%
+            background: #54758E
+            position: absolute
+            top: 0
+            left: 0
+        &:after
+            content: ''
+            display: block
+            width: calc(var(--px1))
+            height: 100%
+            background: #54758E
+            position: absolute
+            top: 0
+            right: calc(var(--px1) * -1.25)
+        .contact
+            &-list
+                border: calc(var(--px1)) solid #54758E
+                border-top: 0
+                display: flex
+
+            &-current
+                svg
+                    transform: rotate(180deg)
+
+    &-list
+        display: none
+        flex-direction: column
+        text-align: center
+        padding-bottom: calc(23 * var(--px1))
+        position: absolute
+        top: calc(57 * var(--px1))
+        padding-top: calc(10 * var(--px1))
+        left: 0
+        width: calc(100% + var(--px1))
+        z-index: 2
+        background-color: #0D2536
+        &__item
+            font-size: calc(var(--px1) * 14)
+            color: #fff
+            text-decoration: none
+            line-height: calc(var(--px1) * 30)
+            margin-bottom: calc(10 * var(--px1))
+            transition: .3s ease
+            &:hover
+                color: $accent
+
+            &.btn-item
+                margin-top: calc(27 * var(--px1))
+            &.phone
+                display: flex
+                text-align: left
+                padding-left: calc(15 * var(--px1))
+                > *
+                    margin-top: auto
+                    margin-bottom: auto
+                .icon-wa
+                    width: calc(13 * var(--px1))
+                    height: calc(15 * var(--px1))
+                    margin-right: calc(var(--px1) * 5)
+                    background-repeat: no-repeat
+                    background-position: center
+                    background-size: cover
+                    background-image: url(../images/dist/wa.png)
+    
+.header
+    height: calc(var(--px1) * 189)
+    .menu-toggler
+        display: none
+    .header-top
+        display: flex
+        justify-content: flex-end
+        > *
+            margin-top: auto
+            margin-bottom: auto
+    .header-bot
+        padding-top: calc(28 * var(--px1))
+        display: flex
+        transition: .3s ease
+        > *
+            margin-top: auto
+            margin-bottom: auto
+    a.logo
+        display: block
+        width: calc(var(--px1) * 193)
+        min-width: calc(var(--px1) * 193)
+        height: auto
+        margin-right: calc(var(--px1) * 40)
+        svg
+            width: 100%
+            height: auto
+    
+
+
+        
+
+
+
+    .lang
+        margin-top: calc(19 * var(--px1))
+        margin-left: calc(var(--px1) * 81)
+
+    .menu
+        ul
+            display: flex
+            li
+                a
+                    width: calc(var(--px1) * 155)
+                    display: block
+                    border: calc(var(--px1)) solid #54758E
+                    border-right-width: calc(var(--px1) / 2)
+                    border-left-width: calc(var(--px1) / 2)
+                    font-style: normal
+                    font-weight: 400
+                    font-size: calc(var(--px1) * 18)
+                    line-height: calc(var(--px1) * 22)
+                    color: #FFFFFF
+                    height: calc(var(--px1) * 50)
+                    text-decoration: none
+                    text-align: center
+                    line-height: calc(var(--px1) * 50)
+                    transition: .3s ease
+                    &:hover
+                        background-color: #16D1E2
+                        color: #000
+                &.current-menu-item
+                    a
+                        background-color: #16D1E2
+                        color: #000
+
+    .search
+        margin-left: calc(var(--px1) * 152)
+        display: flex
+        .search-form
+            position: relative
+            display: none
+            input
+                background: #39576D
+                box-shadow: 0px 45px 18px rgba(0, 0, 0, 0.01), 0px 25px 15px rgba(0, 0, 0, 0.05), 0px 11px 11px rgba(0, 0, 0, 0.09), 0px 3px 6px rgba(0, 0, 0, 0.1)
+                width: calc(338 * var(--px1))
+                border: 0
+                height: calc(var(--px1) * 50)
+                font-size: calc(14 * var(--px1))
+                line-height: calc(15 * var(--px1))
+                padding-left: calc(20 * var(--px1))
+                padding-right: calc(40 * var(--px1))
+                color: #fff
+                &::placeholder
+                    color: rgba(255, 255, 255, 0.5)
+                
+            .search-form-close
+                width: calc(20 * var(--px1))
+                height: calc(20 * var(--px1))
+                position: absolute
+                right: calc(10 * var(--px1))
+                top: calc(15 * var(--px1))
+                cursor: pointer
+                svg
+                    position: absolute
+                    top: 0
+                    left: 0
+                    width: calc(20 * var(--px1))
+                    height: calc(20 * var(--px1))
+        .search-handler
+            width: calc(var(--px1) * 30)
+            height: calc(var(--px1) * 31)
+            position: relative
+            margin-top: auto
+            margin-bottom: auto
+            cursor: pointer
+            svg
+                width: 100%
+                height: auto
+                position: absolute
+                top: 0
+                left: 0
+                
+    &.serch-open
+        .header-bot
+            transform: translateX(calc(var(--px1) * -175))
+        .search
+            margin-left: calc(var(--px1) * 19)
+            .search-form
+                display: block
+            .search-handler
+                display: none
+
+.catalog-menu
+    padding-left: calc(100 * var(--px1))
+    padding-right: calc(130 * var(--px1))
+    background-color: #0D2536
+    width: calc(970 * var(--px1))
+    position: fixed
+    height: 100%
+    top: 0
+    right: 0
+    z-index: 101
+    border-left: calc(var(--px1)) solid #54758E
+    transform: translate(100%)
+    transition: .5s ease
+    .heading
+        font-size: 4.7vh
+    &-close
+        cursor: pointer
+        svg
+            width: 4.4vh
+            height: 4.4vh
+    &-top
+        display: flex
+        padding-top: 6.5vh
+        padding-bottom: 6.5vh
+        justify-content: space-between
+        > * 
+            margin-top: auto
+            margin-bottom: auto
+
+    &-nav
+        &__item
+            width: 100%
+            display: flex
+            text-decoration: none
+            border: calc(var(--px1)) solid #54758E
+            &-img
+                min-width: calc(273 * var(--px1))
+                max-width: calc(273 * var(--px1))
+                height: 14.3vh
+                border-right: calc(var(--px1)) solid #54758E
+                background-repeat: no-repeat
+                background-position: center
+                background-size: cover
+            &-cont
+                padding-top: calc(30 * var(--px1))
+                padding-left: calc(33 * var(--px1))
+                flex-grow: 1
+                position: relative
+                transition: .3s ease
+                span
+                    font-size: calc(var(--px1) * 24)
+                    line-height: 1.2
+                    color: #FFFFFF
+                    transition: .3s ease
+                svg
+                    position: absolute
+                    bottom: 20px
+                    right: 30px
+                    transform: rotate(-45deg)
+                    width: calc(var(--px1) * 56)
+                    height: calc(var(--px1) * 30)
+                    path
+                        fill: #fff
+                        transition: .3s ease
+
+
+            &:hover
+                .catalog-menu
+                    &-nav
+                        &__item
+                            &-cont
+                                background-color: #16D1E2
+                                span
+                                    color: #fff
+
+                                svg
+                                    path
+                                        fill: #000
+
+.catalog-menu-open
+    overflow: hidden
+    .catalog-menu
+        transform: translate(0)
+
+
+.mob-menu
+    display: none
+    padding-left: 20px
+    padding-right: 20px
+    .search-form
+        position: relative
+        height: 45px
+        width: 100%
+        background: #39576D
+        box-shadow: 0px 45px 18px rgba(0, 0, 0, 0.01), 0px 25px 15px rgba(0, 0, 0, 0.05), 0px 11px 11px rgba(0, 0, 0, 0.09), 0px 3px 6px rgba(0, 0, 0, 0.1)
+        svg
+            position: absolute
+            left: 21px
+            top: 15px
+            width: 15px
+            height: 16px
+            z-index: 2
+        input
+            background: #39576D
+            padding-left: 51px
+            border: 0
+            width: 100%
+            height: 45px
+            color: #fff
+            font-size: 12px
+            line-height: 45px
+            &::placeholder
+                color: rgba(255, 255, 255, 0.5)
+
+    nav
+        margin-top: 40px
+        >ul 
+            >li
+                width: 137px
+                &:first-child
+                    border-top: 1px solid #54758E
+                >a
+                    text-align: center
+                    display: block
+                    font-size: 12px
+                    line-height: 15px
+                    color: #FFFFFF
+                    text-decoration: none
+                    width: 137px
+                    height: 55px
+                    line-height: 55px
+                    border: 1px solid #54758E
+                    margin-top: -1px
+                    transition: .3s ease
+                    &:active
+                        color: #000
+                        background-color: #16D1E2
+
+                &.catalog.open
+                    .catalog-menu-nav
+                        display: block
+
+
+    .catalog-menu-nav
+        width: calc(100vw - 40px)   
+        margin-bottom: 40px
+        display: none
+        &__item
+            line-height: 1.2
+            margin-top: -1px
+            &-img
+                height: 98px
+                min-width: 136px
+                max-width: 136px
+            &-cont 
+                padding-top: 15px
+                padding-left: 18px
+                span
+                    font-size: 12px
+                svg
+                    width: 28px
+                    height: 15px
+                    bottom: 17px
+                    right: 11px
+
+
+    .contact-wrap
+        display: flex
+        margin-top: 50px
+    .break
+        height: 150px
+        width: 100%
+    .contact
+        margin-left: 0
+        padding-top: 0
+        min-width: 168px
+        &-current 
+            justify-content: center
+            span
+                font-size: 12px
+
+        &-list
+            padding-bottom: 17px
+            padding-top: 5px
+            top: 30px
+            &__item
+                font-size: 12px
+                margin-bottom: 5px
+        &.open
+            position: relative
+            top: 1px
+            &:after
+                right: -1px
++media-breakpoint-down(xl)
+
+
++media-breakpoint-down(lg)
+    
+
++media-breakpoint-down(sm)
+    .header 
+        height: 78px
+        position: fixed
+        top: 0
+        left: 0
+        width: 100%
+        z-index: 10
+        background-color: #0D2536
+        .menu-toggler
+            cursor: pointer
+            position: absolute
+            right: 20px
+            top: 24px
+            display: block
+            width: 35px
+            height: 30px
+            display: flex
+            svg
+                margin: auto
+                &.open
+                    display: none
+
+            
+        &-top
+            .contact
+                display: none
+
+            .lang
+                display: none
+        
+
+        a.logo
+            min-width: 102px
+            max-width: 102px
+            position: absolute
+            left: 20px
+            top: 22px
+        .menu, .search
+            display: none !important
+   
+    .menu-openned
+        overflow: hidden
+        .header
+            &-top
+                .lang
+                    margin-top: 24px
+                    display: flex
+                    margin-right: 83px
+                    font-size: 13.5px
+                    span, a
+                        width: 42px
+                        height: 30px
+                        line-height: 30px
+            .menu-toggler
+                svg
+                    &.open
+                        display: block
+                    &.closed
+                        display: none
+
+        .mob-menu
+            z-index: 10
+            display: block
+            position: fixed
+            left: 0
+            width: 100%
+            top: 78px
+            background-color: #0D2536
+            height: calc(100vh - 78px)
+            overflow-y: auto
+

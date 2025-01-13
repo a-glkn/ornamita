@@ -1,0 +1,677 @@
+@use 'sass:math'
+@use 'sass:color'
+
+@import config
+@import 'blocks/**/*'
+
+.section-intro
+    display: flex
+    height: 100vh
+    min-height: 600px
+    background-repeat: no-repeat
+    background-position: center
+    background-size: cover
+    overflow: hidden
+    background-image: url(../images/dist/bg-intro.jpg)
+    .c-1
+        min-width: 50%
+        max-width: 50%
+        display: flex
+        transition: .3s ease
+        .video
+            filter: drop-shadow(0px 45px 18px rgba(0, 0, 0, 0.01)) drop-shadow(0px 25px 15px rgba(0, 0, 0, 0.05)) drop-shadow(0px 11px 11px rgba(0, 0, 0, 0.09)) drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.1))
+            position: relative
+            z-index: 2
+            width: 100%
+            height: 100%
+            background-repeat: no-repeat
+            background-position: center
+            background-size: cover
+            min-height: calc(var(--px1) * 872)
+            max-height: calc(var(--px1) * 872)
+            top: 50%
+            transform: translateY(-50%)
+            transition: .5s ease
+            img
+                display: none
+            video
+                display: none
+            .play
+                cursor: pointer
+                width: calc(var(--px1) * 101)
+                height: calc(var(--px1) * 101)
+                position: absolute
+                top: 50%
+                left: 50%
+                transform: translate(-50%, -50%)
+            .close
+                position: absolute
+                right: calc(var(--px1) * 30)
+                top: calc(var(--px1) * 30)
+                width: calc(var(--px1) * 60)
+                display: none
+                cursor: pointer
+                height: calc(var(--px1) * 60)
+                svg
+                    width: calc(var(--px1) * 60)
+                    height: calc(var(--px1) * 60)
+
+    .c-2
+        min-width: 50%
+        max-width: 50%
+        padding-left: 6.6%
+        display: flex
+        .intro-block
+            margin-top: auto
+            margin-bottom: auto
+        .text-lg
+            max-width: calc(var(--px1) * 646)
+        .heading
+            max-width: calc(var(--px1) * 518)
+            margin-bottom: calc(var(--px1) * 20)
+
+    .btn-arr
+        margin-top: calc(var(--px1) * 100)
+
+    &.video-open
+        .c-1
+            min-width: 100%
+            max-width: 100%
+        .c-2
+            display: none
+        .video
+            min-width: 100%
+            overflow: hidden
+            min-height: 100vh
+            .play
+                display: none
+            video
+                position: absolute
+                top: 50%
+                left: 50%
+                display: block
+                transform: translate(-50%, -50%)
+                min-width: 100%
+                min-height: 100%
+                width: auto
+                height: auto
+                z-index: -1
+            .close
+                display: block
+
+.section-products
+    padding-top: calc(var(--px1) * 150)
+    padding-bottom: calc(var(--px1) * 150)
+    background-repeat: no-repeat
+    background-position: center
+    background-image: url(../images/dist/bg-prod.jpg)
+    background-size: cover
+
+    
+.section-service
+    padding-top: calc(var(--px1) * 150)
+    padding-bottom: calc(var(--px1) * 150)
+    background-repeat: no-repeat
+    background-position: center
+    background-image: url(../images/dist/bg-service.jpg)
+    background-size: cover
+    .cont
+        display: flex
+        .c-1
+            width: calc(var(--px1) * 623)
+        .c-2
+            width: calc(var(--px1) * 887)
+    .heading
+        margin-top: calc(var(--px1) * -20)
+    
+    nav.service
+        width: calc(var(--px1) * 887)
+        ul
+            li
+                a
+                    text-decoration: none
+                    color: #FFFFFF
+                    height: calc(var(--px1) * 147)
+                    display: flex
+                    width: 100%
+                    height: calc(var(--px1) * 147)
+                    border: calc(var(--px1)) solid #54758E
+                    padding-left: calc(var(--px1) * 50)
+                    padding-right: calc(var(--px1) * 50)
+                    background-color: rgba(0, 6, 14, 0.1)
+                    transition: .3s ease
+                    justify-content: space-between
+                    span
+                        margin-top: auto
+                        margin-bottom: auto
+                        font-size: calc(var(--px1) * 40)
+                        line-height: 1.175
+                        color: #FFFFFF
+                    svg
+                        width: calc(var(--px1) * 56)
+                        height: calc(var(--px1) * 30)
+                        margin-top: auto
+                        margin-bottom: auto
+                        transform: rotate(-45deg)
+                        path
+                            fill: #fff
+                            transition: .3s ease
+
+                    &:hover
+                        background-color: #16D1E2
+                        color: #000
+                        span
+                            color: #000
+                        svg
+                            path
+                                fill: #000
+
+.section-journal
+    padding-top: calc(var(--px1) * 116)
+    padding-bottom: calc(var(--px1) * 130)
+    background-repeat: no-repeat
+    background-image: url(../images/dist/bg-blog.jpg)
+    background-size: cover
+    background-position: center
+    .heading-header
+        display: flex
+        justify-content: space-between
+        > *
+            margin-top: auto
+            margin-bottom: auto
+    .card_featured
+        margin-top: calc(var(--px1) * 70)
+        margin-bottom: calc(var(--px1) * 40)
+
+    .btn-mob
+        display: none
+
+.section-contacts
+    position: relative
+    height: calc(var(--px1) * 660)
+    .cont
+        position: relative
+        z-index: 2
+        height: calc(var(--px1) * 660)
+    .map
+        position: absolute
+        top: 0
+        left: 0
+        img
+            width: 100%
+            height: auto
+
+    .contacts-menu
+        position: absolute
+        top: 50%
+        right: 0
+        transform: translateY(-50%)
+        background-color: #0D2536
+        width: calc(var(--px1) * 534)
+        display: flex
+        &-content
+            &__item
+                display: none
+                padding-top: calc(var(--px1) * 30)
+                padding-left: calc(var(--px1) * 30)
+                padding-right: calc(var(--px1) * 30)
+                p
+                    font-size: calc(var(--px1) * 16)
+                    line-height: calc(var(--px1) * 20)
+                    margin-bottom: 1em
+                    b
+                        color: #16D1E2
+                        font-weight: normal
+                        display: block
+                    a
+                        color: #fff
+                        text-decoration: none
+                        transition: .3s ease
+                        &:hover
+                            color: #16D1E2
+                &.active
+                    display: block
+        &-nav
+            min-width: calc(var(--px1) * 212)
+            max-width: calc(var(--px1) * 212)
+            ul
+                width: 100%
+                li
+                    font-size: calc(var(--px1) * 18)
+                    line-height: calc(var(--px1) * 90)
+                    height: calc(var(--px1) * 90)
+                    color: #FFFFFF
+                    border: calc(var(--px1)) solid #54758E
+                    text-align: center
+                    cursor: pointer
+                    transition: .3s ease
+                    &:hover
+                        border-color: #16D1E2
+                        background-color: #16D1E2
+
+                    &.active
+                        cursor: default
+                        border-color: #16D1E2
+                        background-color: #16D1E2
+
+.section-advantges
+    .heading-mob
+        display: none
+    .num
+        font-family: 'marby'
+        font-size: calc(var(--px1) * 500)
+        letter-spacing: 2px
+        color: rgba(84, 117, 142, 0.2)
+
+    .slide
+        width: 100%
+        height: calc(var(--px1) * 900)
+        background-repeat: no-repeat
+        background-position: center
+        background-size: cover
+        background-image: url(../images/dist/bg-adv.jpg)
+        .text
+            margin-top: calc(var(--px1) * 225)
+        .cont
+            display: flex
+            .c-1
+                min-width: 60%
+                max-width: 60%
+                position: relative
+            .c-2
+                min-width: 40%
+                max-width: 40%
+        .heading
+            position: absolute
+            left: 0
+            top: calc(var(--px1) * 470)
+            white-space: nowrap
+    .swiper-pagination
+        font-size: calc(var(--px1) * 24)
+        line-height: calc(var(--px1) * 45)
+        letter-spacing: calc(var(--px1))
+        position: absolute
+        bottom: calc(var(--px1) * 320)
+        right: 0
+        padding-right: calc(var(--px1) * 302)
+        color: #54758E
+        text-align: right
+        user-select: none
+
+    .swiper-button-next, .swiper-button-prev
+        transform: none
+        top: auto
+        position: absolute
+        opacity: 1
+        display: block
+        margin-top: 0
+        width: calc(var(--px1) * 57)
+        height: calc(var(--px1) * 31)
+        z-index: 20
+        cursor: pointer
+        bottom: calc(var(--px1) * 327)
+        svg
+            position: absolute
+            top: 0  
+            left: 0
+            width: calc(var(--px1) * 57)
+            height: calc(var(--px1) * 31)
+            path
+                fill: #54758E
+        &:after
+            display: none
+
+    .swiper-button-next
+        right: calc(var(--px1) * 225)
+        
+    .swiper-button-prev
+        left: auto
+        right: calc(var(--px1) * 382)
+
+.section-projects
+    background-repeat: no-repeat
+    background-position: centr
+    background-image: url(../images/dist/bg-project.jpg)
+    background-size: cover
+    padding-top: calc(var(--px1) * 150)        
+    padding-bottom: calc(var(--px1) * 137)
+    .slider-projects
+        padding-bottom: calc(var(--px1) * 98)
+    .swiper-pagination
+        font-size: calc(var(--px1) * 24)
+        line-height: calc(var(--px1) * 45)
+        letter-spacing: calc(var(--px1))
+        color: #FFFFFF
+
+    .swiper-button-next, .swiper-button-prev
+        bottom: calc(var(--px1) * 20)
+        transform: none
+        top: auto
+        position: absolute
+        opacity: 1
+        display: block
+        margin-top: 0
+        width: calc(var(--px1) * 57)
+        height: calc(var(--px1) * 31)
+        z-index: 20
+        cursor: pointer
+        &.swiper-button-disabled
+            opacity: 0.5
+        svg
+            position: absolute
+            top: 0  
+            left: 0
+            width: calc(var(--px1) * 57)
+            height: calc(var(--px1) * 31)
+        &:after
+            display: none
+
+    .swiper-button-next
+        left: calc(var(--px1) * (556 + 350))
+        
+    .swiper-button-prev
+        left: calc(var(--px1) * 556)
+
+    .slide
+        display: flex
+        border: calc(var(--px1)) solid #54758E
+        .heading-mob
+            display: none
+        .text
+            margin-top: calc(var(--px1) * 152)
+            width: calc(var(--px1) * 500)
+        .btn-link
+            position: absolute
+            left: calc(var(--px1) * 80)
+            bottom: calc(var(--px1) * 50)
+        .c-1
+            min-width: calc(var(--px1) * 765)
+            max-width: calc(var(--px1) * 765)
+            height: calc(var(--px1) * 787)
+            padding-top: calc(var(--px1) * 50)
+            padding-left: calc(var(--px1) * 50)
+            padding-bottom: calc(var(--px1) * 50)
+            padding-right: calc(var(--px1) * 65)
+            position: relative
+            background: rgba(46, 74, 95, 0.2)
+        .c-2
+            min-width: calc(var(--px1) * 745)
+            max-width: calc(var(--px1) * 745)
+            height: calc(var(--px1) * 787)
+            background-repeat: no-repeat
+            background-position: center
+            background-size: cover
+            
+
+
++media-breakpoint-down(xl)
+  
++media-breakpoint-down(lg)
+  
++media-breakpoint-down(md)
+
+        
++media-breakpoint-down(sm)
+    .btn-arr
+        padding-left: 17.5px
+        padding-right: 17.5px
+        height: 60px
+        width: 100%
+        span
+            font-size: 20px
+        svg
+            width: 28px
+            height: 15px
+    .section-intro
+        height: auto
+        flex-direction: column
+        padding-top: 40px
+        .btn-arr 
+            margin-top: 50px
+        .c-1
+            order: 2
+            min-width: 100%
+            max-width: 100%
+            .video
+                margin-top: 0
+                transform: none
+                background: none !important
+                min-height: auto
+                max-height: none
+                .play
+                    width: 20px
+                    height: 20px
+                img
+                    display: block
+                    width: 100%
+                    height: auto
+        .c-2
+            order: 1
+            padding-left: 20px
+            padding-right: 20px
+            padding-bottom: 50px
+            min-width: 100%
+            max-width: 100%
+            .text-lg
+                max-width: 100%
+            .heading
+                margin-bottom: 10px
+                max-width: 100%
+    .section-products
+        padding-top: 80px
+        padding-bottom: 146px
+        background-image: url(../images/dist/bg-prod-mob.jpg)
+
+    .section-advantges 
+        padding-top: 115px
+        padding-bottom: 150px
+        background-image: url(../images/dist/adv-mob.jpg)
+        background-repeat: no-repeat
+        background-position: center
+        background-size: cover
+        .swiper-pagination, .swiper-button-next, .swiper-button-prev
+            display: none
+        .swiper-wrapper
+            flex-direction: column
+        .heading-mob
+            display: block
+            text-align: center
+            margin-bottom: 23px
+        .cont
+            position: relative
+        .num
+            font-size: 128px
+            width: 76px
+            text-align: center
+        .slide
+            height: auto
+            background: none
+            .text
+                margin-top: 0
+            .heading
+                display: none
+            .cont 
+                .c-1
+                    max-width: none
+                    min-width: auto
+                    position: absolute
+                    right: 0
+                    top: -90px
+                .c-2
+                    padding-right: 0
+                    padding-left: 20px
+                    max-width: none
+                    min-width: auto
+                    padding-right: 90px
+
+
+
+        .slider-advantges
+            .swiper-slide
+                padding-top: 87px
+                &:first-child
+                    padding-top: 57px
+
+    .section-service 
+        padding-top: 70px
+        padding-bottom: 70px
+        .heading
+            margin-top: -10px
+            margin-bottom: 30px
+        .cont
+            flex-direction: column
+            padding-left: 20px  
+            padding-right: 20px
+            .c-1
+                text-align: center
+            .c-2, .c-1
+                width: 100%
+        nav.service 
+            width: 100%
+            ul 
+                li 
+                    a
+                        padding-left: 25px
+                        padding-right: 25px
+                        height: auto
+                        padding-top: 25px
+                        padding-bottom: 25px
+                        span
+                            font-size: 20px
+                            margin-right: 50px
+                        svg
+                            right: 25px
+                            width: 21px
+                            height: 20px
+
+    .section-service-projects-journal
+        background-repeat: no-repeat
+        background-position: center
+        background-size: cover
+        background-image: url(../images/dist/bg-serv-proj-blog-mob.jpg)
+        .section-projects, .section-service, .section-journal
+            background: none
+
+    .section-projects 
+        padding-top: 70px
+        padding-bottom: 70px
+        .slider-projects
+            padding-bottom: 49px
+        .swiper-pagination
+            font-size: 12px
+            line-height: 22px
+            bottom: 0
+        .cont
+            padding-left: 20px
+            padding-right: 20px
+        .slide
+            flex-direction: column-reverse
+            .heading-mob
+                display: block
+                text-align: center
+                padding-left: 20px
+                padding-right: 20px
+                padding-top: 20px
+                padding-bottom: 32px
+            .heading-desktop
+                display: none
+            .btn-link
+                position: static
+                margin-top: 35px
+            .text
+                margin-top: 0   
+                width: 100%
+                max-width: 500px
+                p
+                    margin-bottom: 0
+            .c-1
+                min-width: 100%
+                max-width: 100%
+                padding-top: 30px
+                padding-left: 20px
+                padding-right: 20px
+                padding-bottom: 20px
+                height: auto
+            .c-2
+                min-width: 100%
+                max-width: 100%
+                height: 332px
+
+
+        .swiper-button-next, .swiper-button-prev
+            top: auto
+            margin-top: 0
+            width: 28px
+            height: 15px
+            left: 50%
+            bottom: 3px
+            svg
+                width: 28px
+                height: 15px
+
+        .swiper-button-prev
+            margin-left: -87px
+        .swiper-button-next
+            margin-left: 58px
+
+    .section-journal
+        padding-top: 70px
+        padding-bottom: 70px
+        .heading-header
+            justify-content: center
+        .heading
+            text-align: center
+            margin-bottom: 30px
+        .grid-news
+            margin-bottom: 30px
+
+        .btn-desktop
+            display: none
+        .btn-mob
+            display: flex
+            margin-left: auto
+            margin-right: auto
+        .card_featured
+            display: none
+
+    .section-contacts
+        height: 620px
+        .contacts-menu
+            width: 268px
+            right: auto
+            left: 50%
+            top: auto
+            bottom: 60px
+            transform: translateX(-50%)
+        .contacts-menu-nav 
+            min-width: 106px
+            max-width: 106px
+            ul 
+                li
+                    font-size: 9px
+                    height: 45px
+                    line-height: 45px
+
+        .contacts-menu-content__item 
+            padding-left: 15px
+            padding-right: 15px
+            padding-top: 15px
+            p
+                font-size: 9px 
+                line-height: 11px
+        .cont
+            height: 620px
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+        .map
+            height: 620px
+            position: relative
+            img
+                position: absolute
+                top: 0
+                left: 0
+                width: 100%
+                height: 100%
+                object-fit: cover

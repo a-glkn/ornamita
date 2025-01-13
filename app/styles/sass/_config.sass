@@ -1,0 +1,92 @@
+// USER VARIABLES SECTION
+$accent: #16D1E2 // Accent Color
+$fontsize: 18px // Body Font Size
+$textcolor: #fff // Text Color
+$lineheight: 1.5 // Document Line Height
+$userfont: 'gothic', sans-serif // User Font Family
+$headfont: 'Playfair Display', arial // User Font Family
+$systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
+
+// Bootstrap compatible gutter variable => $gutter
+$grid-gutter-width: 20px
+$gutter: $grid-gutter-width
+$grid-breakpoints: (xs: 0, sm: 992px, md: 1200px, lg: 1480px, xl: 1780px)
+$container-max-widths: (sm: 960px, md: 1140px, lg: 1420px, xl: 1720px)
+$px1: 0.0520833333333333vw
+
+
+
+// IMPORT SECTION
+@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' // Bootstrap Reboot collection
+@import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss' // Bootstrap Breakpoints mixin
+@import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
+// @import 'node_modules/bootstrap/scss/_utilities.scss' // Optional Bootstrap Utilites
+@import "node_modules/swiper/swiper-bundle"
+// @import "node_modules/nice-select2/dist/css/nice-select2.css"
+
+@import "node_modules/@fancyapps/ui/src/Fancybox/fancybox.scss"
+@import "node_modules/aos/dist/aos"
+
+@font-face
+	font-family: 'gothic'
+	src: local('gothic'), url('../fonts/gothic.woff') format('woff')
+
+@font-face
+	font-family: 'marby'
+	src: local('gothic'), url('../fonts/mabry-pro.woff') format('woff')
+
+
+// GENERAL CSS SETTINGS
+
+
+:root
+	--px1: 0.0520833333333333vw	
+
+@media (max-width: 992px)
+	:root
+		--px1: 1px
+
+::placeholder
+	color: rgba(79, 76, 77, .5)
+
+::selection
+	background-color: $accent
+	color: #fff
+
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+
+body
+	font-family: $userfont
+	font-size: $fontsize
+	line-height: $lineheight
+	color: $textcolor
+	min-width: 320px
+	font-weight: 300
+	position: relative
+	overflow-x: hidden
+	background-color: #0D2536
+
+
+input[type="date"]::-webkit-inner-spin-button, input[type="date"]::-webkit-calendar-picker-indicator
+	opacity: 0
+
+ul, ol
+	list-style: none
+	margin: 0
+	padding: 0
+
+.cont
+	width: calc(var(--px1) * 1510)
+	margin-left: auto
+	margin-right: auto	
+
+@media (max-width: 992px)
+	body
+		padding-top: 78px
+	.cont
+		width: 100%

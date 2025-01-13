@@ -1,0 +1,128 @@
+.footer
+    padding-top: calc(var(--px1) * 70)
+    padding-bottom: calc(var(--px1) * 70)
+    .footer-menu
+        ul
+            display: flex
+            li
+                width: calc(var(--px1) * 164)
+                height: calc(var(--px1) * 90)
+                &.lg
+                    width: calc(var(--px1) * 192)
+                a
+                    display: block
+                    width: 100%
+                    height: 100%
+                    border: calc(var(--px1)) solid #54758E
+                    font-size: calc(var(--px1) * 18)
+                    color: #fff
+                    text-decoration: none
+                    text-align: center
+                    line-height: calc(var(--px1) * 90)
+                    transition: .3s ease
+                    border-right-width: calc(var(--px1) / 2)
+                    border-left-width: calc(var(--px1) / 2)
+                    &:hover
+                        background-color: #16D1E2
+                        color: #000
+
+
+    .copyright
+        font-size: calc(var(--px1) * 18)
+        color: #fff
+        margin-top: calc(var(--px1) * 50)
+
+    .footer-top
+        display: flex
+        justify-content: space-between
+
+    .soc
+        display: flex
+        li
+            width: calc(var(--px1) * 100)
+            height: calc(var(--px1) * 90)
+            a
+                display: block
+                width: 100%
+                height: 100%
+                border: calc(var(--px1)) solid #54758E
+                font-size: calc(var(--px1) * 18)
+                color: #fff
+                text-decoration: none
+                text-align: center
+                line-height: calc(var(--px1) * 90)
+                transition: .3s ease
+                border-right-width: calc(var(--px1) / 2)
+                border-left-width: calc(var(--px1) / 2)
+                svg
+                    width: calc(var(--px1) * 40)
+                    height: calc(var(--px1) * 40)
+                &:hover
+                    background-color: #16D1E2
+
+.overlay
+    width: 100%
+    height: 100%
+    background: rgba(4, 17, 34, 0.6)
+    z-index: 100
+    display: none
+    position: absolute
+    top: 0
+    left: 0
+
+.catalog-menu-open
+    .overlay
+        display: block
+
++media-breakpoint-down(xl)
+ 
+    
++media-breakpoint-down(lg)
+  
+    
++media-breakpoint-down(md)
+    
++media-breakpoint-down(sm)
+    .footer
+        padding-top: 30px
+        padding-bottom: 30px
+        .cont
+            padding-left: 20px
+            padding-right: 20px
+        .footer-menu
+            ul
+                justify-content: center
+                li
+                    height: auto
+                    a
+                        font-size: 9px
+                        height: 45px
+                        width: auto
+                        line-height: 45px
+                
+        .soc
+            margin-left: auto
+            margin-right: auto
+            margin-bottom: 20px
+            li
+                height: auto
+                width: auto
+                a
+                    padding-left: 15px
+                    padding-right: 15px
+                    padding-top: 12.5px
+                    padding-bottom: 12.5px
+                    height: auto
+                    width: auto
+                    line-height: 1
+                    svg
+                        width: 20px
+                        height: 20px
+                        
+        .footer-top
+            flex-direction: column-reverse
+        .copyright
+            margin-top: 20px
+            text-align: center
+            font-size: 9px
+        

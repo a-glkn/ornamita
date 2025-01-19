@@ -330,11 +330,15 @@
 
 .section-projects
     background-repeat: no-repeat
-    background-position: centr
+    background-position: center
     background-image: url(../images/dist/bg-project.jpg)
     background-size: cover
     padding-top: calc(var(--px1) * 150)        
     padding-bottom: calc(var(--px1) * 137)
+    &_card
+        background: none
+        padding-bottom: calc(var(--px1) * 100)
+        background: linear-gradient(180deg, #0C2334 0%, #264259 100%)
     .slider-projects
         padding-bottom: calc(var(--px1) * 98)
     .swiper-pagination
@@ -401,9 +405,141 @@
             background-repeat: no-repeat
             background-position: center
             background-size: cover
-            
+
+.section-features
+    background-color: #0C2334
+.features
+    display: flex
+    flex-wrap: wrap
+    &__item
+        padding-top: calc(var(--px1) * 100)
+        padding-bottom: calc(var(--px1) * 100)
+        min-width: 50%
+        max-width: 50%
+        position: relative
+        &:nth-child(odd)
+            padding-right: calc(var(--px1) * 80)
+            &:after
+                content: ''
+                display: block
+                position: absolute
+                top: 0
+                right: 0
+                width: calc(var(--px1) * 1)
+                height: 100%
+                background-color: #54758E
+        &:nth-child(even)
+            padding-left: calc(var(--px1) * 80)
+
+        &:nth-child(3), &:nth-child(4)
+            &:before
+                content: ''
+                display: block
+                position: absolute
+                top: 0
+                right: 0
+                width: 100%
+                height: calc(var(--px1) * 1)
+                background-color: #54758E
+        .semi-heading
+            margin-bottom: calc(var(--px1) * 20)
+        p
+            font-size: calc(var(--px1) * 24)
+            line-height: 1.33
+            margin-bottom: 0
 
 
+.section-card
+    padding-bottom: calc(var(--px1) * 100)
+    background: linear-gradient(180deg, #264259 0%, #0B2233 79.46%)
+    .heading
+        margin-bottom: 0
+    .cont
+        display: flex
+        .c-1
+            min-width: 41%
+            max-width: 41%
+        .c-2
+            min-width: 59%
+            max-width: 59%
+            padding-left: calc(var(--px1) * 50)
+
+    .cont-top
+        margin-top: calc(var(--px1) * 93)
+        .btn-quest
+            margin-top: calc(var(--px1) * 15)
+
+    .cont-main
+        margin-top: calc(var(--px1) * 50)
+
+.section-about
+    background-image: url(../images/dist/bg-card-about.jpg)
+    background-repeat: no-repeat
+    background-position: center
+    background-size: cover
+    padding-top: calc(var(--px1) * 50)        
+    padding-bottom: calc(var(--px1) * 250)
+    .cont
+        display: flex
+    .c-1
+        min-width: 62%
+        max-width: 62%
+    .c-2
+        min-width: 38%
+        max-width: 38%
+        display: flex
+    p:last-child
+        margin-bottom: 0
+    .btn-arr
+        margin-top: auto
+        margin-left: auto
+        width: calc(var(--px1)* 546)
+        span
+            font-size: calc(var(--px1) * 32)
+
+section
+    .breadcrumbs
+        padding-top: calc(var(--px1) * 47)
+
+    .heading-row
+        padding-bottom: calc(var(--px1) * 75)
+        border-bottom: calc(var(--px1) * 1) solid #54758E
+        .cont
+            display: flex
+            justify-content: space-between
+            > * 
+                margin-top: auto
+                margin-bottom: auto
+
+        .cont-heading
+            margin-top: calc(var(--px1) * 68)
+
+.section-calc
+    padding-top: calc(var(--px1) * 150)
+    padding-bottom: calc(var(--px1) * 150)
+    background-image: url(../images/dist/bg-calc.jpg)
+    background-repeat: no-repeat
+    background-position: center
+    background-size: cover
+
+.section-contacts-page
+    background-image: url(../images/dist/bg-contacts-page.jpg)
+    background-repeat: no-repeat
+    background-position: center
+    background-size: cover
+    .location
+        margin-bottom: calc(var(--px1) * 30)
+        &:last-child
+            margin-bottom: 0
+        .loc
+            margin-bottom: calc(var(--px1) * 30)
+
+    .section-about
+        background: none
+        padding-bottom: calc(var(--px1) * 220)
+        padding-top: calc(var(--px1) * 150)
+    .cont-locations
+        padding-top: calc(var(--px1) * 100)
 +media-breakpoint-down(xl)
   
 +media-breakpoint-down(lg)
@@ -552,6 +688,22 @@
         .section-projects, .section-service, .section-journal
             background: none
 
+        .section-journal
+            position: relative
+            .cont
+                position: relative
+                z-index: 2
+            &:before
+                position: absolute
+                top: 0
+                left: 0
+                width: 100%
+                height: 100%
+                background: linear-gradient(180deg, #264259 0%, #0B2233 100%)
+                content: ''
+                display: block
+                opacity: 0.75
+
     .section-projects 
         padding-top: 70px
         padding-bottom: 70px
@@ -675,3 +827,94 @@
                 width: 100%
                 height: 100%
                 object-fit: cover
+
+
+    .section-card
+        padding-top: 0
+        padding-bottom: calc(var(--px1) * 75)
+        .cont
+            flex-direction: column
+            padding-left: 20px
+            padding-right: 20px
+            .c-1
+                min-width: 100%
+                max-width: 100%
+            .c-2
+                min-width: 100%
+                max-width: 100%
+                padding-left: 0
+        .cont-top
+            margin-top: 50px
+            .c-2
+                display: none
+
+        .cont-main
+            margin-top: calc(var(--px1) * 37)
+            .c-2
+                margin-top: 40px
+
+
+    .features
+        flex-direction: column
+        border-left: 1px solid #54758E
+        &__item
+            padding-top: 20px
+            padding-bottom: 20px
+            min-width: 100%
+            max-width: 100%
+            padding-left: 20px !important
+            padding-right: 20px !important
+            border-bottom: 1px solid #54758E
+            &:before, &:after
+                display: none !important
+                
+            .semi-heading
+                margin-bottom: 10px
+            p
+                font-size: 12px
+
+            &:first-child
+                padding-top: 50px
+            &:last-child
+                border-bottom: 0
+                padding-bottom: 50px
+
+    .section-features
+        .cont
+            padding-left: 20px
+            padding-right: 20px
+
+
+    .section-calc
+        padding-top: 75px
+        padding-bottom: 75px
+        .cont
+            padding-left: 20px
+            padding-right: 20px
+
+    .section-about
+        padding-top: 0
+        padding-bottom: 125px
+        .cont
+            flex-direction: column
+            padding-left: 20px
+            padding-right: 20px
+        .c-1
+            min-width: 100%
+            max-width: 100%
+        .c-2
+            min-width: 100%
+            max-width: 100%
+        .btn-arr
+            margin-top: 0
+            margin-left: 0
+            width: 100%
+            max-width: 400px
+            margin-top: 35px
+            span
+                font-size: 20px
+
+
+    section
+        .breadcrumbs
+            padding-top: calc(var(--px1) * 40)

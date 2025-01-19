@@ -36,30 +36,6 @@
         display: flex
         justify-content: space-between
 
-    .soc
-        display: flex
-        li
-            width: calc(var(--px1) * 100)
-            height: calc(var(--px1) * 90)
-            a
-                display: block
-                width: 100%
-                height: 100%
-                border: calc(var(--px1)) solid #54758E
-                font-size: calc(var(--px1) * 18)
-                color: #fff
-                text-decoration: none
-                text-align: center
-                line-height: calc(var(--px1) * 90)
-                transition: .3s ease
-                border-right-width: calc(var(--px1) / 2)
-                border-left-width: calc(var(--px1) / 2)
-                svg
-                    width: calc(var(--px1) * 40)
-                    height: calc(var(--px1) * 40)
-                &:hover
-                    background-color: #16D1E2
-
 .overlay
     width: 100%
     height: 100%
@@ -69,6 +45,58 @@
     position: absolute
     top: 0
     left: 0
+
+.popup
+    background-color: #EBF1F5
+    display: none
+    transition: opacity 0.3s ease
+    position: absolute
+    opacity: 0
+    left: 50%
+    border: calc(var(--px1) * 1) solid #54758E
+    width: calc(var(--px1) * 810)
+    transform: translateX(-50%)
+    z-index: 101
+    padding-top: calc(var(--px1) * 100)
+    padding-bottom: calc(var(--px1) * 100)
+    padding-left: calc(var(--px1) * 60)
+    padding-right: calc(var(--px1) * 60)
+    .btn-arr
+        width: 100%
+        font-size: calc(var(--px1) * 32)
+    &__close
+        cursor: pointer
+        position: absolute
+        top: calc(var(--px1) * 40)
+        right: calc(var(--px1) * 40)
+        width: calc(var(--px1) * 30)
+        height: calc(var(--px1) * 30)
+        svg
+            width: calc(var(--px1) * 30)
+            height: calc(var(--px1) * 30)
+    .semi-heading
+        color: #0D2536
+
+    .form
+        margin-top: calc(var(--px1) * 50)
+        .btn-arr
+            margin-top: calc(var(--px1) * 30)
+
+    .thanks-inner
+        > svg
+            margin-bottom: calc(var(--px1) * 20)
+            width: calc(var(--px1) * 100)
+            height: calc(var(--px1) * 100)
+        .btn-arr
+            margin-top: calc(var(--px1) * 70)
+        p
+            font-size: calc(var(--px1) * 24)
+            line-height: 1.3333
+            color: #0D2536
+            margin: 0
+
+
+
 
 .catalog-menu-open
     .overlay
@@ -99,25 +127,6 @@
                         height: 45px
                         width: auto
                         line-height: 45px
-                
-        .soc
-            margin-left: auto
-            margin-right: auto
-            margin-bottom: 20px
-            li
-                height: auto
-                width: auto
-                a
-                    padding-left: 15px
-                    padding-right: 15px
-                    padding-top: 12.5px
-                    padding-bottom: 12.5px
-                    height: auto
-                    width: auto
-                    line-height: 1
-                    svg
-                        width: 20px
-                        height: 20px
                         
         .footer-top
             flex-direction: column-reverse
@@ -126,3 +135,30 @@
             text-align: center
             font-size: 9px
         
+
+    .popup
+        max-width: 400px
+        width: calc(100% - 40px)
+        padding-top: 30px
+        padding-left: 30px
+        padding-right: 30px
+        padding-bottom: 60px
+        &__close
+            width: 58px
+            height: 58px
+            border-radius: 50%
+            background: #16D1E2
+            display: flex
+            cursor: pointer
+            position: absolute
+            top: -30px
+            right: -10px
+            svg
+                width: 20px
+                height: 20px
+                margin: auto
+
+        .form
+            margin-top: 30px
+            .btn-arr
+                margin-top: 10px

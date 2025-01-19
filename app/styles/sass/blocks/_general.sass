@@ -11,6 +11,57 @@
     text-transform: uppercase
     line-height: 1.21875
 
+.breadcrumbs
+    font-size: calc(var(--px1) * 13)
+    line-height: 1.54
+    display: flex
+    a
+        font-size: calc(var(--px1) * 13)
+        line-height: 1.54
+        position: relative
+        color: #fff
+        text-decoration: none
+        padding-right: calc(var(--px1) * 34)
+        &:after
+            right: calc(var(--px1) * -10)
+            position: absolute
+            top: 50%
+            margin-top: calc(var(--px1) * -8)
+            padding-right: calc(var(--px1) * 34)
+            content: ''
+            width: calc(var(--px1) * 16)
+            height: calc(var(--px1) * 16)
+            display: block
+            background-size: calc(var(--px1) * 16) calc(var(--px1) * 16)
+            background-repeat: no-repeat
+            background-position: 0 0
+            background-image: url(../images/dist/bread.svg)
+    span
+        font-weight: bold
+
+.char
+    padding-left: calc(var(--px1) * 15)
+    padding-right: calc(var(--px1) * 15)
+    padding-top: calc(var(--px1) * 10)
+    padding-bottom: calc(var(--px1) * 10)
+    background: #39576D
+    display: inline-flex
+    > *
+        margin-top: auto
+        margin-bottom: auto
+    svg
+        width: calc(var(--px1) * 15)
+        height: calc(var(--px1) * 15)
+        margin-left: calc(var(--px1) * 5)
+    .icon-check
+        width: calc(var(--px1) * 20)
+        height: calc(var(--px1) * 25)
+        margin-left: 0
+    span
+        font-size: calc(var(--px1) * 20)
+        line-height: 1.25
+        color: #FFFFFF
+
 
 .semi-heading
     font-size: calc(var(--px1) * 40)
@@ -125,6 +176,7 @@
     padding-right: calc(var(--px1) * 35)
     justify-content: space-between
     text-decoration: none
+    border: 0
     svg
         width: calc(var(--px1) * 56)
         height: calc(var(--px1) * 30)
@@ -151,6 +203,25 @@
                 fill: #fff
         span
             color: #fff
+
+.btn-quest
+    display: inline-flex
+    width: calc(var(--px1) * 204)
+    height: calc(var(--px1) * 49)
+    padding-left: calc(var(--px1) * 20)
+    padding-right: calc(var(--px1) * 20)
+    color: #fff
+    font-size: calc(var(--px1) * 16)
+    line-height: 1.25
+    background-color: #39576D
+    border: 0
+    svg
+        width: calc(var(--px1) * 30)
+        height: calc(var(--px1) * 31)
+        margin-right: calc(var(--px1) * 15)
+    > *
+        margin-top: auto
+        margin-bottom: auto
 
 .cat
     display: block
@@ -356,7 +427,235 @@
     a:hover
         background: #39576D
 
-        
+.card-info
+    background: #2E4A5F
+    border: calc(var(--px1) * 1) solid #54758E
+    box-shadow: 0px calc(var(--px1) * 45) calc(var(--px1) * 18) rgba(0, 0, 0, 0.01), 0px calc(var(--px1) * 25) calc(var(--px1) * 15) rgba(0, 0, 0, 0.05), 0px calc(var(--px1) * 11) calc(var(--px1) * 11) rgba(0, 0, 0, 0.09), 0px calc(var(--px1) * 3) calc(var(--px1) * 6) rgba(0, 0, 0, 0.1)
+    &__heading
+        padding-left: calc(var(--px1) * 35)
+        padding-right: calc(var(--px1) * 35)
+        display: flex
+        font-size: calc(var(--px1) * 24)
+        line-height: 1.375
+        color: #FFFFFF
+        font-weight: bold
+        min-height: calc(var(--px1) * 103)
+        padding-top: calc(var(--px1) * 15)
+        padding-bottom: calc(var(--px1) * 15)
+        border: calc(var(--px1) * 1) solid #54758E
+        margin-bottom: calc(var(--px1) * 35)
+        span
+            margin-top: auto
+            margin-bottom: auto
+
+    &__char
+        display: flex
+        padding-left: calc(var(--px1) * 35)
+        padding-right: calc(var(--px1) * 35)
+        margin-bottom: calc(var(--px1) * 23)
+   
+        &-title
+            margin-right: calc(var(--px1) * 10)
+            font-size: calc(var(--px1) * 24)
+            line-height: 1.375
+            color: #FFFFFF
+        .char
+            margin-right: calc(var(--px1) * 5)
+        > * 
+            margin-top: auto
+            margin-bottom: auto
+    
+    .btn-arr
+        margin-top: calc(var(--px1) * 12)
+        width: 100%
+        span
+            font-size: calc(var(--px1) * 32)
+.calc-form
+    background: #EBF1F5
+    border: calc(var(--px1) * 1) solid #54758E
+    display: flex
+    padding-top: calc(var(--px1) * 50)    
+    padding-bottom: calc(var(--px1) * 50)    
+    .heading
+        color: #0D2536
+        margin-bottom: calc(var(--px1) * 14)
+    .semi-heading
+        color: #0D2536
+    .c-1
+        min-width: 37.3%
+        max-width: 37.3%
+        padding-left: calc(var(--px1) * 50)    
+        padding-right: calc(var(--px1) * 59)    
+    .c-2
+        min-width: 62.7%
+        max-width: 62.7%
+        padding-right: calc(var(--px1) * 50)    
+
+.form
+    display: flex
+    flex-direction: column
+    &__select
+        width: 100%
+        height: calc(var(--px1) * 87)
+        margin-bottom: calc(var(--px1) * 20)
+        border-radius: 0
+        border: calc(var(--px1) * 1) solid #54758E
+        padding-left: calc(var(--px1) * 30)
+        padding-right: calc(var(--px1) * 30)
+        color: #000
+        font-size: calc(var(--px1) * 24)
+        outline: none !important
+        -webkit-appearance: none
+        -moz-appearance: none
+        appearance: none
+        background-image: url(../images/dist/arr-select.svg)
+        background-repeat: no-repeat
+        background-position: right calc(var(--px1) * 30) center
+        background-size: calc(var(--px1) * 30) calc(var(--px1) * 31)
+    &__input
+        padding-left: calc(var(--px1) * 30)
+        padding-right: calc(var(--px1) * 30)
+        width: 100%
+        height: calc(var(--px1) * 87)
+        margin-bottom: calc(var(--px1) * 20)
+        border-radius: 0
+        border: calc(var(--px1) * 1) solid #54758E
+        color: #000
+        font-size: calc(var(--px1) * 24)
+        &::placeholder
+            color: #A2ABB1
+    .btn-arr
+        width: 100%
+        span
+            font-size: calc(var(--px1) * 32)
+  
+
+.slider-card
+    border: calc(var(--px1) * 1) solid #54758E
+    filter: drop-shadow(0px calc(var(--px1) * 45) calc(var(--px1) * 18) rgba(0, 0, 0, 0.01)) drop-shadow(0px calc(var(--px1) * 25) calc(var(--px1) * 15) rgba(0, 0, 0, 0.05)) drop-shadow(0px calc(var(--px1) * 11) calc(var(--px1) * 11) rgba(0, 0, 0, 0.09)) drop-shadow(0px calc(var(--px1) * 3) calc(var(--px1) * 6) rgba(0, 0, 0, 0.1))
+    .swiper-button-prev, .swiper-button-next
+        width: calc(var(--px1) * 51)
+        height: calc(var(--px1) * 51)
+        margin-top: 0
+        left: auto
+        right: auto
+        top: auto
+        bottom: calc(var(--px1) * 30)
+        &:after
+            display: none
+        svg
+            width: calc(var(--px1) * 51)
+            height: calc(var(--px1) * 51)
+
+    .swiper-button-prev
+        left: 50%
+        margin-left: calc(var(--px1) * -61)
+
+    .swiper-button-next
+        transform: rotate(180deg)
+        left: 50%
+        margin-left: calc(var(--px1) * 10)
+    .swiper-slide
+        img
+            display: block
+            width: 100%
+            height: 100%
+            object-fit: cover
+
+.slider-card-thumbs
+    user-select: none
+    margin-top: calc(var(--px1) * 20)
+    filter: drop-shadow(0px calc(var(--px1) * 45) calc(var(--px1) * 18) rgba(0, 0, 0, 0.01)) drop-shadow(0px calc(var(--px1) * 25) calc(var(--px1) * 15) rgba(0, 0, 0, 0.05)) drop-shadow(0px calc(var(--px1) * 11) calc(var(--px1) * 11) rgba(0, 0, 0, 0.09)) drop-shadow(0px calc(var(--px1) * 3) calc(var(--px1) * 6) rgba(0, 0, 0, 0.1))
+    .swiper-slide
+        cursor: pointer
+        border: calc(var(--px1) * 1) solid #54758E
+        img
+            display: block
+            width: 100%
+            height: 100%
+            object-fit: cover
+
+    .swiper-slide-thumb-active
+        border: calc(var(--px1) * 1) solid $accent
+
+.soc
+    display: flex
+    li
+        width: calc(var(--px1) * 100)
+        height: calc(var(--px1) * 90)
+        a
+            display: block
+            width: 100%
+            height: 100%
+            border: calc(var(--px1)) solid #54758E
+            font-size: calc(var(--px1) * 18)
+            color: #fff
+            text-decoration: none
+            text-align: center
+            line-height: calc(var(--px1) * 90)
+            transition: .3s ease
+            border-right-width: calc(var(--px1) / 2)
+            border-left-width: calc(var(--px1) / 2)
+            svg
+                width: calc(var(--px1) * 40)
+                height: calc(var(--px1) * 40)
+            &:hover
+                background-color: #16D1E2
+
+.loc
+    position: relative
+    padding-left: calc(var(--px1) * 40)
+    font-size: calc(var(--px1) * 24)
+    line-height: 1.3333
+    svg
+        position: absolute
+        top: 0
+        left: 0
+        width: calc(var(--px1) * 30)
+        height: calc(var(--px1) * 30)
+
+    &__title
+        font-size: calc(var(--px1) * 24)
+        line-height: 1.3333
+        color: #16D1E2
+    a
+        color: #fff
+        text-decoration: none
+        transition: .3s ease
+        &:hover
+            color: #16D1E2
+
+
+.location
+    background: #2E4A5F
+    display: flex
+    border: calc(var(--px1) * 1) solid #54758E
+    filter: drop-shadow(0px calc(var(--px1) * 45) calc(var(--px1) * 18) rgba(0, 0, 0, 0.01)) drop-shadow(0px calc(var(--px1) * 25) calc(var(--px1) * 15) rgba(0, 0, 0, 0.05)) drop-shadow(0px calc(var(--px1) * 11) calc(var(--px1) * 11) rgba(0, 0, 0, 0.09)) drop-shadow(0px calc(var(--px1) * 3) calc(var(--px1) * 6) rgba(0, 0, 0, 0.1))
+    .semi-heading
+        margin-bottom: calc(var(--px1) * 25)
+    &__content
+        min-width: calc(var(--px1) * 1059)
+        max-width: calc(var(--px1) * 1059)
+        padding: calc(var(--px1) * 50)
+        .semi-heading
+            padding-bottom: calc(var(--px1) * 25)
+            border-bottom: calc(var(--px1) * 1) solid #54758E
+    &__map
+        min-width: calc(var(--px1) * 451)
+        max-width: calc(var(--px1) * 451)
+        img
+            display: block
+            width: 100%
+            height: 100%
+            object-fit: cover
+    .loc
+        margin-bottom: calc(var(--px1) * 30)
+
+    .loc-cols
+        display: flex
+        .loc
+            min-width: 50%
+            max-width: 50%
 +media-breakpoint-down(xl)
  
    
@@ -527,3 +826,135 @@
                     padding-bottom: 4px
                     font-size: 8px
 
+    .slider-card-thumbs
+        display: none
+
+    .slider-card
+        .swiper-button-prev, .swiper-button-next
+            width: 20px
+            height: 20px
+            bottom: auto
+            top: 50%
+            left: auto
+            margin-top: -20px
+            margin-left: 0
+            svg
+                width: 20px
+                height: 20px
+
+        .swiper-button-prev
+            left: 20px
+        .swiper-button-next
+            right: 20px
+
+    .char
+        padding-left: 10px
+        padding-right: 10px
+        padding-top: 10px
+        padding-bottom: 10px
+        svg
+            width: 12px
+            height: 12px
+            margin-left: 5px
+        .icon-check
+            width: 15px
+            height: 10px
+            margin-left: 0
+        span
+            font-size: 12px
+
+
+    .card-info
+        .btn-arr
+            margin-top: 2px
+            span
+                font-size: 20px
+        &__heading
+            padding-left: 20px
+            padding-right: 20px
+            font-size: 14px
+            min-height: 67px
+            padding-top: 10px
+            padding-bottom: 10px
+            margin-bottom: 20px
+
+        &__char
+            padding-left: 20px
+            padding-right: 20px
+            flex-wrap: wrap
+            margin-bottom: 18px
+            &-title
+                min-width: 100%
+                margin-right: 0
+                font-size: 14px
+                line-height: 33px
+            .char
+                margin-right: 5px
+                margin-bottom: 5px
+            > * 
+                margin-top: auto
+                margin-bottom: auto
+
+    .calc-form
+        padding-top: 30px
+        padding-bottom: 30px
+        padding-left: 30px
+        padding-right: 30px
+        flex-direction: column
+        .heading
+            margin-bottom: 10px
+        .c-1
+            min-width: 100%
+            max-width: 100%
+            padding-left: 0   
+            padding-right: 0
+        .c-2
+            min-width: 100%
+            max-width: 100%
+            padding-right: 0
+            margin-top: 30px 
+
+    .form
+        &__select
+            height: 45px
+            margin-bottom: 10px
+            padding-left: 15px
+            padding-right: 15px
+            font-size: 12px
+            background-position: right calc(var(--px1) * 15) center
+            background-size: calc(var(--px1) * 15) calc(var(--px1) * 15)
+        &__input
+            padding-left: 15px
+            padding-right: 15px
+            height: 45px
+            margin-bottom: 10px
+            border-radius: 0
+            font-size: 12px
+        .btn-arr
+            margin-top: 10px
+            height: 60px
+            justify-content: center
+            span
+                font-size: 20px
+            svg
+                display: none
+    
+
+    .soc
+        margin-left: auto
+        margin-right: auto
+        margin-bottom: 20px
+        li
+            height: auto
+            width: auto
+            a
+                padding-left: 15px
+                padding-right: 15px
+                padding-top: 12.5px
+                padding-bottom: 12.5px
+                height: auto
+                width: auto
+                line-height: 1
+                svg
+                    width: 20px
+                    height: 20px

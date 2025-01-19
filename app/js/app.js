@@ -170,4 +170,123 @@ document.addEventListener('DOMContentLoaded', () => {
     } else if(document.querySelector('.video') && window.innerWidth < 992) {
         document.querySelector('.section-intro .video').setAttribute('data-fancybox', 'Видео');
     }
+
+    if( document.querySelector('.slider-card-thumbs') && document.querySelector('.slider-card') ) {
+        var thumbSwiper = new Swiper(".slider-card-thumbs", {
+            loop: true,
+            spaceBetween: 10,
+            slidesPerView: 5,
+            freeMode: true,
+            watchSlidesProgress: true,
+        });
+    
+        new Swiper(".slider-card", {
+            loop: true,
+            spaceBetween: 20,
+            navigation: {
+              nextEl: ".slider-card .swiper-button-next",
+              prevEl: ".slider-card .swiper-button-prev",
+            },
+            thumbs: {
+              swiper: thumbSwiper,
+            },
+        });
+    }
+
+    function showPopup(name) {
+        const popup = document.querySelector(`.popup-${name}`);
+        const overlay = document.querySelector('.overlay');
+    
+        if (!popup) {
+            console.error(`Popup with class .popup-${name} not found`);
+            return;
+        }
+    
+        // Сбрасываем стили перед повторным отображением
+        popup.style.opacity = 0;
+        popup.style.transition = 'none';
+    
+        popup.querySelector('.form-inner').style.display = 'block';
+        popup.querySelector('.thanks-inner').style.display = 'none';
+    
+        // Показываем overlay
+        overlay.style.display = 'block';
+        popup.style.display = 'block'; // Показываем popup
+    
+        // Определяем ширину экрана
+        const isMobile = window.innerWidth < 992;
+    
+        if (isMobile) {
+            // Для мобильных устройств
+            popup.style.position = 'fixed';
+            popup.style.bottom = '-100%'; // Скрываем за экраном
+            popup.style.transition = 'bottom 0.3s ease, opacity 0.3s ease'; // Плавная анимация
+    
+            // Плавное появление
+            setTimeout(() => {
+                popup.style.bottom = '0'; // Сдвигаем наверх
+                popup.style.opacity = 1;
+            }, 10);
+        } else {
+            // Для больших экранов
+            const windowHeight = window.innerHeight;
+            const scrollY = window.scrollY; // Текущая прокрутка страницы
+            const popupHeight = popup.offsetHeight;
+    
+            // Вычисляем позицию сверху с учетом прокрутки
+            const topPosition = Math.max((windowHeight - popupHeight) / 2 + scrollY, scrollY);
+    
+            popup.style.position = 'absolute';
+            popup.style.left = '50%';
+            popup.style.transform = 'translateX(-50%)';
+            popup.style.top = `${topPosition}px`;
+            popup.style.transition = 'opacity 0.3s ease';
+    
+            setTimeout(() => {
+                popup.style.opacity = 1; // Плавное появление
+            }, 10);
+        }
+    
+        // Для скрытия всех попапов и overlay при клике на overlay
+        overlay.addEventListener('click', closePopup);
+    
+        // Для закрытия попапа при клике на кнопку .popup__close
+        const closeButton = popup.querySelector('.popup__close');
+        if (closeButton) {
+            closeButton.addEventListener('click', closePopup);
+        }
+    }
+    
+
+    // Функция для закрытия всех попапов
+    function closePopup() {
+        const overlay = document.querySelector('.overlay');
+        const popups = document.querySelectorAll('.popup');
+    
+        // Скрываем overlay
+        overlay.style.display = 'none';
+    
+        // Скрываем все попапы
+        popups.forEach(popup => {
+            popup.style.opacity = 0;
+            popup.style.transition = 'none'; // Убираем анимацию при скрытии
+            popup.style.display = 'none';
+    
+            // Сбрасываем стили для мобильных устройств
+            if (window.innerWidth < 992) {
+                popup.style.bottom = '-100%'; // Возвращаем за экран
+            }
+        });
+    }
+
+    // Обработчик для открытия попапов при клике на элементы с data-popup
+    document.addEventListener('click', (e) => {
+        const button = e.target.closest('[data-popup]');
+        if (button) {
+            const popupName = button.getAttribute('data-popup');
+            showPopup(popupName);
+        }
+    });
+
+   
 });

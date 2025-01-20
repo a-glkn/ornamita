@@ -656,6 +656,89 @@
         .loc
             min-width: 50%
             max-width: 50%
+
+.cats
+    display: flex
+    flex-wrap: wrap
+    &__item
+        min-width: 33.3333333%
+        max-width: 33.3333333%
+        border: calc(var(--px1) * 1) solid #54758E
+        text-decoration: none
+        display: flex
+        justify-content: space-between
+        background-color: #2E4A5F
+        padding: calc(var(--px1) * 30)
+        padding-bottom: calc(var(--px1) * 28)
+        transition: .3s ease
+        span
+            font-size: calc(var(--px1) * 24)
+            line-height: 1.21
+            color: #FFFFFF
+            margin-top: auto
+            margin-bottom: auto
+        svg
+            width: calc(var(--px1) * 43)
+            height: calc(var(--px1) * 43)
+            margin-top: auto
+            margin-bottom: auto
+            path, rect
+                transition: .3s ease
+        &:hover, &.active
+            background-color: #16D1E2
+            span
+                color: #000
+            svg
+                path, rect
+                    fill: #000
+
+
+.portfolio
+    display: grid
+    gap: calc(var(--px1) * 30)
+    grid-template-columns: repeat(2, 1fr)
+    &__item
+        background: #2E4A5F
+        border: calc(var(--px1) * 1) solid #54758E
+        text-decoration: none
+        filter: drop-shadow(0px calc(var(--px1) * 45) calc(var(--px1) * 18) rgba(0, 0, 0, 0.01)) drop-shadow(0px calc(var(--px1) * 25) calc(var(--px1) * 15) rgba(0, 0, 0, 0.05)) drop-shadow(0px calc(var(--px1) * 11) calc(var(--px1) * 11) rgba(0, 0, 0, 0.09)) drop-shadow(0px calc(var(--px1) * 3) calc(var(--px1) * 6) rgba(0, 0, 0, 0.1))
+        &-img
+            position: relative
+            img
+                max-width: 100%
+                height: auto
+        &-arr
+            z-index: 1
+            position: absolute
+            right: calc(var(--px1) * 50)
+            bottom: calc(var(--px1) * 50)
+            width: calc(var(--px1) * 101) 
+            height: calc(var(--px1) * 101) 
+            background-color: #16D1E2
+            border-radius: 50%
+            display: flex
+            transform: rotate(-45deg)
+            transition: .3s ease
+            transition: .3s
+            svg
+                margin: auto
+                width: calc(var(--px1) * 56)
+                height: calc(var(--px1) * 30)
+                path
+                    fill: #000
+                    transition: .3s ease
+        
+        &-title
+            min-height: calc(var(--px1) * 372)
+            padding: calc(var(--px1) * 50)
+
+        &:hover
+            .portfolio
+                &__item
+                    &-arr
+                        transform: rotate(0deg)
+
+
 +media-breakpoint-down(xl)
  
    

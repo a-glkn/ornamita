@@ -283,9 +283,70 @@
         img
             opacity: 1
 
+.tags
+    display: flex
+    span, a
+        font-size: calc(var(--px1) * 12)
+        line-height: calc(var(--px1) * 15)
+        color: #FFFFFF
+        padding: 7px 10px
+        border: calc(var(--px1)) solid #54758E
+        background-color: #39576D
+        text-decoration: none
+        transition: .3s eaes
+    a:hover
+        background-color: $accent
+        color: #000
+
+
+.site
+    display: flex
+    border: calc(var(--px1) * 1) solid #54758E
+    text-decoration: none
+    
+    &__img
+        max-width: calc(var(--px1) * 100)
+        min-width: calc(var(--px1) * 100)
+        border-right: calc(var(--px1) * 1) solid #54758E
+        position: relative
+        img
+            max-width: 100%
+            height: auto
+            position: absolute
+            object-fit: cover
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            transition: .3s ease
+    &__date
+        font-size: calc(var(--px1) * 12)
+        line-height: 1.2
+        color: #16D1E2
+
+    &__content
+        padding: calc(var(--px1) * 20)
+
+    &__meta
+        display: flex
+        justify-content: space-between
+    &__title
+        font-weight: 700
+        font-size: calc(var(--px1) * 15 )
+        line-height: 1.2
+        color: #FFFFFF
+        margin-top: calc(var(--px1) * 10)
+    .tags
+        margin-left: calc(var(--px1) * 20)
+        display: block
+    &:hover
+        .site
+            &__img
+                img
+                    opacity: .8
 .card
     text-decoration: none
-    filter: drop-shadow(0px 45px 18px rgba(0, 0, 0, 0.01)) drop-shadow(0px 25px 15px rgba(0, 0, 0, 0.05)) drop-shadow(0px 11px 11px rgba(0, 0, 0, 0.09)) drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.1))
+    filter: drop-shadow(0px calc(var(--px1) * 45) calc(var(--px1) * 18) rgba(0, 0, 0, 0.01)) drop-shadow(0px calc(var(--px1) * 25) calc(var(--px1) * 15) rgba(0, 0, 0, 0.05)) drop-shadow(0px calc(var(--px1) * 11) calc(var(--px1) * 11) rgba(0, 0, 0, 0.09)) drop-shadow(0px calc(var(--px1) * 3) calc(var(--px1) * 6) rgba(0, 0, 0, 0.1))
     padding-bottom: calc(var(--px1) * 99)
     border: calc(var(--px1)) solid #54758E
     background-color: #2E4A5F
@@ -312,15 +373,6 @@
         font-size: calc(var(--px1) * 15)
         line-height: calc(var(--px1) * 18)
         color: rgba(255, 255, 255, 0.6)
-    .tags
-        display: flex
-        span
-            font-size: calc(var(--px1) * 12)
-            line-height: calc(var(--px1) * 15)
-            color: #FFFFFF
-            padding: 7px 10px
-            border: calc(var(--px1)) solid #54758E
-            background-color: #39576D
     &__content
         padding-left: calc(var(--px1) * 30)
         padding-right: calc(var(--px1) * 30)
@@ -399,7 +451,70 @@
     grid-template-columns: repeat(3, 1fr)
     grid-template-rows: repeat(1, 1fr)
     gap: calc(var(--px1) * 30)
+
+.sidebar-block
+    filter: drop-shadow(0px calc(var(--px1) * 45) calc(var(--px1) * 18) rgba(0, 0, 0, 0.01)) drop-shadow(0px calc(var(--px1) * 25) calc(var(--px1) * 15) rgba(0, 0, 0, 0.05)) drop-shadow(0px calc(var(--px1) * 11) calc(var(--px1) * 11) rgba(0, 0, 0, 0.09)) drop-shadow(0px calc(var(--px1) * 3) calc(var(--px1) * 6) rgba(0, 0, 0, 0.1))
+    background-color: #2E4A5F
+    &__title
+        font-size: calc(var(--px1) * 36)
+        line-height: 0.92
+        color: #28455A
+        padding-left: calc(var(--px1) * 25)
+        padding-right: calc(var(--px1) * 25)
+        padding-top: calc(var(--px1) * 15)
+        padding-bottom: calc(var(--px1) * 20)
+        background-color: #fff
+    &_tags
+        .tags
+            border: calc(var(--px1) * 1) solid #54758E
+            border-top: 0
+            flex-wrap: wrap
+            padding: calc(var(--px1) * 25)
+            padding-bottom: calc(var(--px1) * 20)
+            >*
+                margin-right: 5px
+                margin-bottom: 5px
+
+.journal-container
+    padding-right: calc(var(--px1) * 480)
+    position: relative
+    .grid-news
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        grid-template-rows: auto
+        gap: calc(var(--px1) * 30)
+    .sidebar
+        position: absolute
+        top: 0
+        right: 0
+        width: calc(var(--px1) * 410)
+        .sidebar-block
+            margin-bottom: calc(var(--px1) * 50)
            
+
+.pagenavi
+    display: flex
+    justify-content: center
+    margin-top: calc(var(--px1) * 100)
+    &__page
+        font-family: 'marby'
+        font-size: calc(var(--px1) * 24)
+        line-height: calc(var(--px1) * 45)
+        letter-spacing: calc(var(--px1) * 1)
+        color: #FFFFFF
+    > *
+        margin-top: auto
+        margin-bottom: auto
+    &__prev
+        margin-right: calc(var(--px1) * 118)
+    &__next
+        margin-left: calc(var(--px1) * 118)
+    &__prev, &__next
+        width: calc(var(--px1) * 58)
+        height: calc(var(--px1) * 57)
+        svg
+            width: calc(var(--px1) * 58)
+            height: calc(var(--px1) * 57)
 
 .slider-projects
     .slide
@@ -876,7 +991,13 @@
             min-width: 320px
             max-width: 320px
 
-
+    .tags
+        span, a
+            padding-left: 5px
+            padding-right: 5px
+            padding-top: 4px
+            padding-bottom: 4px
+            font-size: 8px
     .card
         padding-bottom: 61px
         &__content
@@ -901,13 +1022,6 @@
             svg
                 width: 28px
                 height: 15px
-            .tags
-                span
-                    padding-left: 5px
-                    padding-right: 5px
-                    padding-top: 4px
-                    padding-bottom: 4px
-                    font-size: 8px
 
     .slider-card-thumbs
         display: none

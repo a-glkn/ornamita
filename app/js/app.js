@@ -288,5 +288,15 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+
+    if(document.querySelector('.slider-single')) {
+        new Swiper(".slider-single", {
+            navigation: {
+              nextEl: ".slider-single-wrap .swiper-button-next",
+              prevEl: ".slider-single-wrap .swiper-button-prev"
+            }
+        });
+    }
+
    
 });

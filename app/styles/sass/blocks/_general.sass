@@ -79,7 +79,7 @@
     color: #FFFFFF
 
 
-.text
+.text, blockquote
     font-size: calc(var(--px1) * 24)
     line-height: 1.3333
     color: #FFFFFF
@@ -860,6 +860,8 @@
     font-size: calc(var(--px1) * 24)
     line-height: 1.33333
     color: #FFFFFF
+    b, strong
+        font-weight: bold
     h1
         font-size: calc(var(--px1) * 64)
         text-transform: uppercase
@@ -899,7 +901,35 @@
             margin-bottom: 0.5em
             &:last-child
                 margin-bottom: 0
+    ul
+        margin: 1em 0
+        li
+            font-size: calc(var(--px1) * 24)
+            line-height: 1.5
+            color: #FFFFFF
+            margin-bottom: calc(var(--px1) * 30)
+            padding-left: calc(var(--px1) * 56)
+            position: relative
+            &:before
+                content: ''
+                display: block
+                width: calc(var(--px1) * 37)
+                height: calc(var(--px1) * 36)
+                position: absolute
+                top: 0
+                left: 0
+                background-repeat: no-repeat    
+                background-position: 0 0
+                background-image: url(../images/dist/check.svg)
+            &:last-child
+                margin-bottom: 0
 
+    blockquote
+        margin: 2em 0
+        &:first-child
+            margin-top: 0
+        &:last-child
+            margin-bottom: 0
     .img
         margin: 3em 0
         border: calc(var(--px1) * 1) solid #54758E
@@ -913,6 +943,9 @@
             padding-top: calc(var(--px1) * 60)
             padding-bottom: calc(var(--px1) * 60)
             border-bottom: calc(var(--px1) * 1)  solid #54758E
+            ul
+                margin-top: 0
+                margin-bottom: 0
         img
             width: 100%
             height: auto
@@ -1064,7 +1097,7 @@
         font-size: 20px
     .semi-heading
         font-size: 20px
-    .text
+    .text, blockquote
         padding-top: 15px
         padding-left: 15px
         font-size: 12px

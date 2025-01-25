@@ -290,11 +290,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     if(document.querySelector('.slider-single')) {
-        new Swiper(".slider-single", {
-            navigation: {
-              nextEl: ".slider-single-wrap .swiper-button-next",
-              prevEl: ".slider-single-wrap .swiper-button-prev"
-            }
+        document.querySelectorAll('.slider-single').forEach((slider) => {
+            new Swiper(slider, {
+                navigation: {
+                    nextEl: slider.closest('.slider-single-wrap').querySelector('.swiper-button-next'),
+                    prevEl: slider.closest('.slider-single-wrap').querySelector('.swiper-button-prev'),
+                }
+            });
         });
     }
 

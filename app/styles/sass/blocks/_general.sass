@@ -15,6 +15,13 @@
     font-size: calc(var(--px1) * 13)
     line-height: 1.54
     display: flex
+    overflow-x: auto
+    -ms-overflow-style: none
+    crollbar-width: none
+    &::-webkit-scrollbar
+        display: none
+    a, span
+        white-space: nowrap
     a
         font-size: calc(var(--px1) * 13)
         line-height: 1.54
@@ -1343,3 +1350,48 @@
             .loc
                 min-width: 100%
                 max-width: 100%
+
+
+    .cont-typo
+        font-size: 12px
+        h1
+            font-size: 32px
+        h2
+            font-size: 20px
+        h3
+            font-size: 18px
+        p
+            font-size: 12px
+        ol
+            padding-left: 12px
+            li
+                font-size: 12px
+        ul
+            li
+                font-size: 12px
+                margin-bottom: 15px
+                padding-left: 30px
+                &:before
+                    width: 20px
+                    height: 20px
+                    background-image: url(../images/dist/check.svg)
+                    background-size: 20px 20px
+
+        blockquote
+            margin: 2em 0
+      
+        .img
+            margin: 3em 0
+            width: 100%
+            margin-left: 0
+            &__content
+                padding: 30px
+                border-bottom: calc(var(--px1) * 1)  solid #54758E
+        .slider-single-wrap
+            margin: 3em 0
+            .slider-single
+                margin-left: 0
+                margin-right: 0
+
+            .swiper-button-next, .swiper-button-prev
+                display: none

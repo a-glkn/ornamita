@@ -11,6 +11,32 @@
     text-transform: uppercase
     line-height: 1.21875
 
+.tooltip
+    cursor: pointer
+    position: relative
+    &-content
+        position: absolute
+        bottom: calc(var(--px1) * 30 + 100%)
+        left: 50%
+        transform: translateX(-50%)
+        width: calc(var(--px1) * 360)
+        background: #0D2536
+        color: #fff
+        padding: calc(var(--px1) * 20)
+        font-size: calc(var(--px1) * 14)
+        display: none
+        border: calc(var(--px1) * 1) solid #54758E
+        &:after
+            content: ""
+            position: absolute
+            top: 100%
+            left: 50%
+            transform: translateX(-50%)
+            border-width: calc(var(--px1) * 15)
+            border-style: solid
+            border-color: #0D2536 transparent transparent transparent
+
+
 .breadcrumbs
     font-size: calc(var(--px1) * 13)
     line-height: 1.54
@@ -53,6 +79,8 @@
     padding-bottom: calc(var(--px1) * 10)
     background: #39576D
     display: inline-flex
+    transition: .3s ease
+    text-decoration: none
     > *
         margin-top: auto
         margin-bottom: auto
@@ -60,6 +88,19 @@
         width: calc(var(--px1) * 15)
         height: calc(var(--px1) * 15)
         margin-left: calc(var(--px1) * 5)
+        path, rect
+            transition: .3s ease
+    .icon-quest
+        margin-left: 0
+    .tooltip
+        position: relative
+        width: calc(var(--px1) * 15)
+        height: calc(var(--px1) * 15)
+        margin-left: 5px
+        svg
+            position: absolute
+            top: 0
+            left: 0
     .icon-check
         width: calc(var(--px1) * 20)
         height: calc(var(--px1) * 25)
@@ -68,6 +109,16 @@
         font-size: calc(var(--px1) * 20)
         line-height: 1.25
         color: #FFFFFF
+
+ 
+a.char
+    &:hover
+        background-color: #16D1E2
+        span
+            color: #000
+        svg
+            path, rect
+                fill: #000
 
 
 .semi-heading
@@ -301,6 +352,7 @@
         background-color: #39576D
         text-decoration: none
         transition: .3s eaes
+        white-space: nowrap
     a:hover
         background-color: $accent
         color: #000
@@ -1144,13 +1196,13 @@
             padding-left: 15px
             padding-right: 15px
         &__title
-            font-size: 10px
-            line-height: 12px
+            font-size: 12px
+            line-height: 15px
             margin-top: 15px
         &__desc
             margin-top: 5px
-            font-size: 8px
-            line-height: 10px
+            font-size: 10px
+            line-height: 12px
         &__date
             font-size: 8px
             line-height: 1
@@ -1161,6 +1213,32 @@
             svg
                 width: 28px
                 height: 15px
+
+    .card
+        &_featured
+            flex-direction: column
+            padding-bottom: 0
+            .card
+                &__img
+                    width: 100%
+                    min-width: 100%
+                    max-width: 100%
+                &__content
+                    position: relative
+                    padding-left: 20px
+                    padding-right: 20px
+                    padding-top: 20px
+                    padding-bottom: 20px
+                &__bottom
+                    padding-left: 0
+                    padding-right: 0
+                    position: static
+                    margin-top: 30px
+                &__desc
+                    font-size: 10px
+                    line-height: 1.25
+                &__title
+                    font-size: 12px
 
     .slider-card-thumbs
         display: none
@@ -1188,6 +1266,10 @@
         padding-right: 10px
         padding-top: 10px
         padding-bottom: 10px
+        
+        .tooltip
+            width: 12px
+            height: 12px
         svg
             width: 12px
             height: 12px
@@ -1395,3 +1477,66 @@
 
             .swiper-button-next, .swiper-button-prev
                 display: none
+
+
+    .journal-container 
+        padding-right: 0
+        .sidebar
+            position: static
+            width: 100%
+        .grid-news
+            grid-template-columns: repeat(1, 1fr)
+            gap: 20px
+            padding-left: 0
+            padding-right: 0
+            .item
+                max-width: 100%
+                min-width: 100%
+
+    .sidebar-block
+        &__title
+            font-size: 24px
+            text-align: center
+
+
+    .site
+        .tags
+            display: none
+        &__title
+            font-size: 12px
+        &__date
+            font-size: 8px
+        &__content
+            padding: 0
+            padding-top: 25px
+            padding-left: 20px
+            padding-right: 20px
+            min-height: 100px
+
+
+    .pagenavi
+        margin-top: 30px
+        &__page
+            font-size: 12px
+            line-height: 22px
+        &__prev
+            margin-right: 59px
+        &__next
+            margin-left: 59px
+        &__prev, &__next
+            width: 29px
+            height: 29px
+            svg
+                width: 29px
+                height: 29px
+
+
+    .tooltip
+        &-content
+            position: absolute
+            bottom: calc(var(--px1) * 30 + 100%)
+            width: 300px
+            color: #fff
+            padding: 10px
+            font-size: 12px
+            display: none !important

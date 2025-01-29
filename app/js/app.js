@@ -300,5 +300,21 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+
+    const tooltips = document.querySelectorAll(".tooltip");
+    if(tooltips.length) {
+        tooltips.forEach(tooltip => {
+            const content = tooltip.querySelector(".tooltip-content");
+    
+            tooltip.addEventListener("mouseenter", () => {
+                content.style.display = "block";
+            });
+    
+            tooltip.addEventListener("mouseleave", () => {
+                content.style.display = "none";
+            });
+        });
+    }
+    
    
 });

@@ -604,6 +604,12 @@ section
         .heading-row
             .heading
                 margin-right: 0
+
+
+.section-journal-archive
+    .cont-tags
+        display: none !important
+
 +media-breakpoint-down(xl)
   
 +media-breakpoint-down(lg)
@@ -1040,3 +1046,29 @@ section
 
     .section-single_portfolio
         padding-bottom: 75px
+
+    .section-journal-archive
+        padding-bottom: 120px
+        .journal-container
+            display: flex
+            flex-direction: column-reverse
+        .heading-row
+            padding-bottom: 40px
+        .sidebar-block_tags
+            display: none
+        .cont-tags
+            display: block !important
+            margin-top: 39px
+            .tags
+                overflow-x: auto
+                -ms-overflow-style: none
+                crollbar-width: none
+                &::-webkit-scrollbar
+                    display: none
+                a
+                    margin-right: 5px
+                    &:last-child
+                        margin-right: 0
+        .cont-content
+            padding-left: 20px
+            padding-right: 20px

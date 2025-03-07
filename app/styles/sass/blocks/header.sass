@@ -338,10 +338,10 @@
     nav
         margin-top: 40px
         >ul 
+            display: flex
+            flex-wrap: wrap
             >li
-                width: 137px
-                &:first-child
-                    border-top: 1px solid #54758E
+                width: 50%
                 >a
                     text-align: center
                     display: block
@@ -349,25 +349,22 @@
                     line-height: 15px
                     color: #FFFFFF
                     text-decoration: none
-                    width: 137px
+                    width: 100%
                     height: 55px
                     line-height: 55px
-                    border: 1px solid #54758E
-                    margin-top: -1px
+                    border: 0.5px solid #54758E
+                    // margin-top: -1px
                     transition: .3s ease
                     &:active
                         color: #000
                         background-color: #16D1E2
 
-                &.catalog.open
-                    .catalog-menu-nav
-                        display: block
 
 
     .catalog-menu-nav
         width: calc(100vw - 40px)   
+        margin-top: 40px
         margin-bottom: 40px
-        display: none
         &__item
             line-height: 1.2
             margin-top: -1px

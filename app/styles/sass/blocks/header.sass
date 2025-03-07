@@ -340,6 +340,8 @@
         >ul 
             display: flex
             flex-wrap: wrap
+            &:has(> li:last-child:nth-child(odd)) > li:last-child
+                width: 100%
             >li
                 width: 50%
                 >a

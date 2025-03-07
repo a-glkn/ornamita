@@ -100,12 +100,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    document.querySelector('.mob-menu li.catalog a').addEventListener("click", (event) => {
-        event.preventDefault();
-
-        document.querySelector('.mob-menu li.catalog').classList.toggle('open');
-    });
-
 
     document.querySelector('.catalog-menu-item').addEventListener("click", (event) => {
         event.preventDefault();

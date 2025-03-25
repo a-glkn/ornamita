@@ -711,7 +711,14 @@ a.char
         width: 100%
         span
             font-size: calc(var(--px1) * 32)
-  
+    
+    &__error
+        font-style: normal
+        font-weight: 400
+        font-size: calc(var(--px1) * 16)
+        color: #FF1F00
+        margin-top: -10px
+        margin-bottom: calc(var(--px1) * 20)
 
 .slider-card
     border: calc(var(--px1) * 1) solid #54758E
@@ -1342,6 +1349,8 @@ a.char
             margin-top: 30px 
 
     .form
+        &__error
+            font-size: 12px
         &__select
             height: 45px
             margin-bottom: 10px

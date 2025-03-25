@@ -686,6 +686,10 @@ a.char
         background-repeat: no-repeat
         background-position: right calc(var(--px1) * 30) center
         background-size: calc(var(--px1) * 30) calc(var(--px1) * 31)
+        &.error
+            color: #FF1F00
+            border-color: #FF1F00
+            background-image: url(../images/dist/arr-select-err.svg)
     &__input
         padding-left: calc(var(--px1) * 30)
         padding-right: calc(var(--px1) * 30)
@@ -698,6 +702,11 @@ a.char
         font-size: calc(var(--px1) * 24)
         &::placeholder
             color: #A2ABB1
+        &.error
+            color: #FF1F00
+            border-color: #FF1F00
+            &::placeholder
+                color: #FF1F00
     .btn-arr
         width: 100%
         span

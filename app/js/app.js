@@ -64,14 +64,12 @@ function showPopup(name, cb = null) {
         closeButton.addEventListener('click', closePopup);
     }
 
-    if(cb) {
-        cb(name);
-    }
+    if (typeof cb === 'function') cb(name);
 }
 
 
 // Функция для закрытия всех попапов
-function closePopup(cb=null) {
+function closePopup(cb = null) {
     const overlay = document.querySelector('.overlay');
     const popups = document.querySelectorAll('.popup');
 
@@ -90,9 +88,7 @@ function closePopup(cb=null) {
         }
     });
 
-    if(cb) {
-        cb();
-    }
+    if (typeof cb === 'function') cb();
 }
 
 

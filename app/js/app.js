@@ -317,6 +317,15 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+
+    const fileBtn = document.getElementById('file-btn');
+    if(fileBtn) {
+        fileBtn.addEventListener('change', function() {
+            document.querySelector('.file-label span').textContent = this.files[0].name
+        })
+    }
+
+
     
    
 });

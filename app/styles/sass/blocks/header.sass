@@ -5,20 +5,24 @@
     padding-right: calc(15 * var(--px1))
     border: calc(var(--px1)) solid transparent
     position: relative
+
     &-current
         display: flex
         line-height: calc(var(--px1) * 30)
         cursor: pointer
         user-select: none
+        min-width: calc(var(--px1) * 131)
         span
             font-size: calc(var(--px1) * 14)
             margin-top: auto
             margin-bottom: auto
+            margin-left: auto
         svg
             width: calc(var(--px1) * 10)
             height: calc(var(--px1) * 10)
             margin-top: auto
             margin-bottom: auto
+            margin-right: auto
             margin-left: calc(var(--px1) * 5)
 
         &:hover
@@ -77,6 +81,7 @@
             line-height: calc(var(--px1) * 30)
             margin-bottom: calc(10 * var(--px1))
             transition: .3s ease
+            white-space: nowrap
             &:hover
                 color: $accent
 

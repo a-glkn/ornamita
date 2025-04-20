@@ -443,6 +443,7 @@
                 background-color: #54758E
         .semi-heading
             margin-bottom: calc(var(--px1) * 20)
+            white-space: nowrap
         p
             font-size: calc(var(--px1) * 24)
             line-height: 1.33
@@ -515,6 +516,8 @@ section
             margin-top: calc(var(--px1) * 68)
     .cont-cats 
         margin-top: calc(var(--px1) * 90)
+        &_top
+            flex-direction: column
 .section-calc
     padding-top: calc(var(--px1) * 150)
     padding-bottom: calc(var(--px1) * 150)
@@ -542,7 +545,7 @@ section
     .cont-locations
         padding-top: calc(var(--px1) * 100)
 
-.section-portfolio
+.section-portfolio, .section-catalog
     padding-bottom: calc(var(--px1) * 150)
     background-image: url(../images/dist/bg.jpg)
     background-repeat: no-repeat
@@ -604,6 +607,32 @@ section
         .heading-row
             .heading
                 margin-right: 0
+
+    &_vacancy
+        padding-bottom: calc(var(--px1) * 150)
+        .cont-vacancy
+            margin-top: calc(var(--px1) * 40)
+        .heading-row .cont-heading
+            margin-top: calc(var(--px1) * 100)
+        .cont-vacancy-info
+            padding-top: calc(var(--px1) * 100)
+
+        .form-vacancy
+            border: calc(var(--px1) * 1) solid #54758E
+            background: #2E4A5F
+            padding: calc(var(--px1) * 50)
+    .cont-with-sidebaer
+        display: flex
+        justify-content: space-between
+        .sidebar
+            min-width: calc(var(--px1) * 487)
+            max-width: calc(var(--px1) * 487)
+        .main-content
+            min-width: calc(var(--px1) * 897)
+            max-width: calc(var(--px1) * 897)
+            padding-top: 0
+
+
 
 
 .section-journal-archive
@@ -997,7 +1026,7 @@ section
         .cont-cats
             margin-top: 50px
 
-    .section-portfolio 
+    .section-portfolio, .section-catalog
         padding-bottom: 75px
         background-image: url(../images/dist/bg-port-mob.jpg)
         .heading-row

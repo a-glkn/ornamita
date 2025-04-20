@@ -111,6 +111,9 @@
         color: #FFFFFF
 
  
+.mt
+    margin-top: 2em
+
 a.char
     &:hover
         background-color: #16D1E2
@@ -647,7 +650,7 @@ a.char
         width: 100%
         span
             font-size: calc(var(--px1) * 32)
-.calc-form
+.calc-form, .career-form
     background: #EBF1F5
     border: calc(var(--px1) * 1) solid #54758E
     display: flex
@@ -668,9 +671,93 @@ a.char
         max-width: 62.7%
         padding-right: calc(var(--px1) * 50)    
 
+.career-form
+    flex-direction: column
+    padding: calc(var(--px1) * 50)
+    text-align: center
 .form
     display: flex
     flex-direction: column
+    label.file-label
+        cursor: pointer
+        width: 100%
+        background-color: transparent
+        height: calc(var(--px1) * 77)
+        border: calc(var(--px1) * 1) solid #54758E
+        font-size: calc(var(--px1) * 20)
+        color: #FFFFFF
+        display: flex
+        padding-left: calc(var(--px1) * 30)
+        padding-right: calc(var(--px1) * 100)
+        background-repeat: no-repeat
+        background-position: calc(100% - calc(var(--px1) * 30)) center
+        background-image: url(../images/dist/pin.svg)
+        background-size: calc(var(--px1) * 47) calc(var(--px1) * 47)
+        span
+            margin-top: auto
+            margin-bottom: auto
+
+    .checkbox-group
+        display: block
+        margin-top: calc(var(--px1) * 30)
+
+    .checkbox-group input
+        padding: 0
+        height: initial
+        width: initial
+        margin-bottom: 0
+        display: none
+        cursor: pointer
+
+    .checkbox-group label
+        position: relative
+        cursor: pointer
+        user-select: none
+        padding-left: calc(var(--px1) * 56)
+        font-weight: 400
+        font-size: calc(var(--px1) * 16)
+        line-height: 1.375
+        color: #FFFFFF
+        a
+            color: #16D1E2
+            text-decoration: none
+
+    .checkbox-group label:before
+        content:''
+        -webkit-appearance: none
+        background-color: transparent
+        border: calc(var(--px1) * 1) solid $accent
+        display: inline-block
+        vertical-align: middle
+        cursor: pointer
+        position: absolute
+        top: calc(var(--px1) * 2)
+        left: 0
+        width: calc(var(--px1) * 36)
+        height: calc(var(--px1) * 36)
+
+    .checkbox-group input:checked + label:after
+        content: ''
+        display: block
+        position: absolute
+        top: calc(var(--px1) * 2)
+        left: 0
+        width: calc(var(--px1) * 36)
+        height: calc(var(--px1) * 36)
+        background-color: $accent
+        background-repeat: no-repeat
+        background-image: url(../images/dist/check2.svg)
+        background-position: center
+        background-size: calc(var(--px1) * 20) calc(var(--px1) * 25)
+    &__title
+        font-style: normal
+        font-weight: 400
+        font-size: calc(var(--px1) * 36)
+        line-height: 1.222
+        letter-spacing: 2px
+        text-transform: uppercase
+        color: #FFFFFF
+        margin-bottom: calc(var(--px1) * 30)
     &__select
         width: 100%
         height: calc(var(--px1) * 87)
@@ -727,6 +814,25 @@ a.char
         margin-top: -10px
         margin-bottom: calc(var(--px1) * 20)
 
+    &-vacancy
+        .form
+            &__input
+                height: calc(var(--px1) * 77)
+                margin-bottom: 0
+                margin-top: calc(var(--px1) * -1)
+                border-color: #54758E
+                background-color: transparent 
+                font-size: calc(var(--px1) * 20)
+                color: #fff
+        
+        .btn-arr
+            height: calc(var(--px1) * 87)
+            margin-top: calc(var(--px1) * 50)
+            span
+                font-size: calc(var(--px1) * 24)
+            svg
+                width: calc(var(--px1) * 40)
+                height: calc(var(--px1) * 23)
 .slider-card
     border: calc(var(--px1) * 1) solid #54758E
     filter: drop-shadow(0px calc(var(--px1) * 45) calc(var(--px1) * 18) rgba(0, 0, 0, 0.01)) drop-shadow(0px calc(var(--px1) * 25) calc(var(--px1) * 15) rgba(0, 0, 0, 0.05)) drop-shadow(0px calc(var(--px1) * 11) calc(var(--px1) * 11) rgba(0, 0, 0, 0.09)) drop-shadow(0px calc(var(--px1) * 3) calc(var(--px1) * 6) rgba(0, 0, 0, 0.1))
@@ -935,6 +1041,86 @@ a.char
                     &-arr
                         transform: rotate(0deg)
 
+.catalog
+    display: grid
+    gap: calc(var(--px1) * 30)
+    grid-template-columns: repeat(2, 1fr)
+    &-tag
+        font-style: normal
+        font-weight: 400
+        font-size: calc(var(--px1) * 24)
+        line-height: 1.21
+        color: #000000
+        padding: calc(var(--px1) * 15) calc(var(--px1) * 20)
+        background: #fff
+    &__item
+        border: calc(var(--px1) * 1) solid #54758E
+        background-color: #2E4A5F
+        text-decoration: none
+        &-arr
+            z-index: 1
+            position: absolute
+            right: calc(var(--px1) * 50)
+            bottom: calc(var(--px1) * 50)
+            width: calc(var(--px1) * 101) 
+            height: calc(var(--px1) * 101) 
+            background-color: #16D1E2
+            border-radius: 50%
+            display: flex
+            transform: rotate(-45deg)
+            transition: .3s ease
+            transition: .3s
+            svg
+                margin: auto
+                width: calc(var(--px1) * 56)
+                height: calc(var(--px1) * 30)
+                path
+                    fill: #000
+                    transition: .3s ease
+
+        &-heading
+            position: relative
+            min-height: calc(var(--px1) * 237)
+            display: flex
+            padding-left: calc(var(--px1) * 50)
+            padding-right: calc(var(--px1) * 201)
+        &-img
+            position: relative
+            .catalog-tag
+                position: absolute
+                top: calc(var(--px1) * 30)
+                right: calc(var(--px1) * 30)
+            img
+                max-width: 100%
+                height: auto
+        .semi-heading
+            line-height: 1.225
+            margin-top: auto
+            margin-bottom: auto
+
+        &:hover
+            .catalog
+                &__item
+                    &-arr
+                        transform: rotate(0deg)
+
+
+        &_text
+            background: rgba(46, 74, 95, 0.7)
+            backdrop-filter: blur(5px)
+            padding: calc(var(--px1) * 50)
+        &.cont-typo
+            b
+                display: block
+            ul
+                li
+                    margin-bottom: calc(var(--px1) * 70)
+                    &:last-child
+                        margin-bottom: 0
+
+
+/* Note: backdrop-filter has minimal browser support */
+
 
 .cont-typo
     font-style: normal
@@ -1005,6 +1191,18 @@ a.char
                 background-image: url(../images/dist/check.svg)
             &:last-child
                 margin-bottom: 0
+
+    ul.simple
+        li
+            margin-bottom: 1em
+            padding-left: calc(var(--px1) * 22)
+            line-height: 1.3333
+            &:before
+                top: 0.5em
+                background-color: #fff
+                border-radius: 50%
+                width: calc(var(--px1) * 7)
+                height: calc(var(--px1) * 7)
 
     blockquote
         margin: 2em 0
@@ -1381,7 +1579,6 @@ a.char
                 font-size: 20px
             svg
                 display: none
-    
 
     .soc
         margin-bottom: 20px
@@ -1415,6 +1612,12 @@ a.char
             &:nth-child(3), &:nth-child(4)
                 min-width: 100%
                 max-width: 100%
+
+        &_top
+            .cats
+                &__item
+                    min-width: 50%
+                    max-width: 50%
 
     .portfolio
         padding-left: 20px
@@ -1565,3 +1768,36 @@ a.char
             padding: 10px
             font-size: 12px
             display: none !important
+
+
+
+    .catalog
+        display: flex
+        flex-direction: column
+        gap: 20px
+        padding-left: 20px
+        padding-right: 20px
+        &-tag
+            font-size: 12px
+            padding: 7px 12px
+        &__item
+            &-heading
+                padding-left: 20px
+                padding-right: 90px
+                min-height: 110px
+            &-arr
+                width: 50px
+                height: 50px
+                bottom: auto
+                right: 20px
+                top: 50%
+                margin-top: -25px
+                svg
+                    width: 28px
+                    height: 15px
+            &-img
+                .catalog-tag
+                    top: 20px
+                    right: 20px
+            &_text
+                display: none

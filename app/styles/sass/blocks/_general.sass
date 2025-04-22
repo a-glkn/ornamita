@@ -285,6 +285,8 @@ a.char
         margin-top: auto
         margin-bottom: auto
 
+.btn-vacancy
+    display: none
 
 
 .cat
@@ -678,6 +680,20 @@ a.char
 .form
     display: flex
     flex-direction: column
+    position: relative
+    &-close
+        top: -29px
+        right: -10px
+        position: absolute
+        width: 58px
+        height: 58px
+        display: none
+        background-color: #16D1E2
+        border-radius: 50%
+        cursor: pointer
+        svg
+            margin: auto
+
     label.file-label
         cursor: pointer
         width: 100%
@@ -1801,3 +1817,53 @@ a.char
                     right: 20px
             &_text
                 display: none
+
+
+    .btn-vacancy
+        display: flex
+        position: fixed
+        bottom: 30px
+        left: 20px
+        width: calc(100% - 40px) !important
+
+    .form
+        &-close
+            display: flex
+        .checkbox-group
+            margin-top: 24px
+
+        .checkbox-group label
+            padding-left: 35px
+            font-size: 12px
+            line-height: 16px
+        .checkbox-group label:before
+            top: 2px
+            left: 0
+            width: 25px
+            height: 25px
+
+        .checkbox-group input:checked + label:after
+            top: calc(var(--px1) * 2)
+            left: 0
+            width: 25px
+            height: 25px
+            background-size: 14px 18px
+
+        &__title
+            font-size: 32px
+
+        label.file-label
+            height: 45px
+            font-size: 12px
+            padding-left: 15px
+            padding-right: 55px
+            background-position: calc(100% - 15px) center
+            background-size: 25px 25px
+
+    .form-vacancy 
+        .form__input
+            padding: 15px
+            height: 41px
+            font-size: 12px
+
+            

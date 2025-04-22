@@ -165,33 +165,33 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-    const contactElements = document.querySelectorAll(".contact");
+    // const contactElements = document.querySelectorAll(".contact");
 
-    if (contactElements.length > 0) {
-        contactElements.forEach((contact) => {
-            const current = contact.querySelector(".contact-current");
+    // if (contactElements.length > 0) {
+    //     contactElements.forEach((contact) => {
+    //         const current = contact.querySelector(".contact-current");
 
-            if (current) {
-                current.addEventListener("click", (event) => {
-                    if (contact.classList.contains("open")) {
-                        contact.classList.remove("open");
-                    } else {
-                        contactElements.forEach((el) => el.classList.remove("open"));
-                        contact.classList.add("open");
-                    }
-                    event.stopPropagation();
-                });
-            }
-        });
+    //         if (current) {
+    //             current.addEventListener("click", (event) => {
+    //                 if (contact.classList.contains("open")) {
+    //                     contact.classList.remove("open");
+    //                 } else {
+    //                     contactElements.forEach((el) => el.classList.remove("open"));
+    //                     contact.classList.add("open");
+    //                 }
+    //                 event.stopPropagation();
+    //             });
+    //         }
+    //     });
 
-        document.addEventListener("click", (event) => {
-            contactElements.forEach((contact) => {
-                if (!contact.contains(event.target)) {
-                    contact.classList.remove("open");
-                }
-            });
-        });
-    }
+    //     document.addEventListener("click", (event) => {
+    //         contactElements.forEach((contact) => {
+    //             if (!contact.contains(event.target)) {
+    //                 contact.classList.remove("open");
+    //             }
+    //         });
+    //     });
+    // }
 
 
     document.querySelector('.catalog-menu-item').addEventListener("click", (event) => {
@@ -326,6 +326,19 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
+    
+    
+    if(document.querySelector('.btn-vacancy')) {
+        document.querySelector('.btn-vacancy').addEventListener("click", (event) => {
+            document.querySelector('body').classList.add('vacancy-form-mob-open');
+        });
+    }
+
+    if(document.querySelector('.form-vacancy .form-close')) {
+        document.querySelector('.form-vacancy .form-close').addEventListener("click", (event) => {
+            document.querySelector('body').classList.remove('vacancy-form-mob-open');
+        });
+    }
     
    
 });

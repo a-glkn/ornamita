@@ -712,6 +712,12 @@ a.char
         span
             margin-top: auto
             margin-bottom: auto
+            display: block
+            width: 100%
+            max-width: 100%
+            white-space: nowrap
+            overflow: hidden
+            text-overflow: ellipsis
 
     .checkbox-group
         display: block
@@ -827,17 +833,19 @@ a.char
         font-weight: 400
         font-size: calc(var(--px1) * 16)
         color: #FF1F00
-        margin-top: -10px
+        margin-top: calc(var(--px1) * -10)
         margin-bottom: calc(var(--px1) * 20)
 
     &-vacancy
         .form
+            &__error
+                margin-top: calc(var(--px1) * 10)
             &__input
                 height: calc(var(--px1) * 77)
                 margin-bottom: 0
                 margin-top: calc(var(--px1) * -1)
                 border-color: #54758E
-                background-color: transparent 
+                background-color: transparent !important
                 font-size: calc(var(--px1) * 20)
                 color: #fff
         

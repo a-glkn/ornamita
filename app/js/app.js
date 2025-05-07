@@ -340,5 +340,22 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
     
-   
+    const accordions = document.querySelectorAll('.accordion');
+
+    if (accordions.length) {
+        accordions.forEach(accordion => {
+            const items = accordion.querySelectorAll('.accordion__item');
+    
+            items.forEach(item => {
+                const header = item.querySelector('.accordion-header');
+    
+                if (header) {
+                    header.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        item.classList.toggle('open');
+                    });
+                }
+            });
+        });
+    }
 });

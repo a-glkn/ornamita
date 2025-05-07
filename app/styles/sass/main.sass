@@ -538,13 +538,41 @@ section
         margin-top: calc(var(--px1) * 90)
         &_top
             flex-direction: column
-.section-calc
+
+
+.section-calc, .section-form-service
     padding-top: calc(var(--px1) * 150)
     padding-bottom: calc(var(--px1) * 150)
     background-image: url(../images/dist/bg-calc.jpg)
     background-repeat: no-repeat
     background-position: center
     background-size: cover
+
+.section-form-service
+    .form
+        background-color: #EBF1F5
+        padding: calc(var(--px1) * 50)
+        border: calc(var(--px1) * 1) solid #54758E
+        .form__input
+            margin-bottom: 0
+            margin-top: calc(var(--px1) * -1)
+        .btn-arr
+            height: calc(var(--px1) * 87)
+            margin-top: calc(var(--px1) * 50)
+            span
+                font-size: calc(var(--px1) * 24)
+            svg
+                width: calc(var(--px1) * 40)
+                height: calc(var(--px1) * 22)
+    .text-simple
+        margin-top: calc(var(--px1) * 18)
+    .cont
+        display: flex
+        justify-content: space-between
+        .c-1
+            min-width: calc(var(--px1) * 1023)
+        .c-2
+            min-width: calc(var(--px1) * 487)
 
 .section-contacts-page
     background-image: url(../images/dist/bg-contacts-page.jpg)
@@ -576,6 +604,21 @@ section
 
     .cont-content
         padding-top: calc(var(--px1) * 100)
+
+
+.section-catalog_service-1
+    .service-row-1
+        margin-top: calc(var(--px1) * 34)
+        justify-content: space-between
+        display: flex
+        .c-1
+            max-width: calc(var(--px1) * 673)
+            min-width: calc(var(--px1) * 673)
+    .list-block
+        margin-top: calc(var(--px1) * 154) 
+
+    .accordion
+        margin-top: calc(var(--px1) * 150)
 
 
 .section-journal-archive
@@ -1004,7 +1047,7 @@ section
             padding-right: 20px
 
 
-    .section-calc
+    .section-calc, .section-form-service
         padding-top: 75px
         padding-bottom: 75px
         .cont
@@ -1179,3 +1222,49 @@ section
                 margin-top: 40px
 
         
+    .section-form-service
+        .form
+            padding: 30px
+            .btn-arr
+                height: 60px
+                margin-top: 20px
+                padding-left: 17.5px
+                padding-right: 17.5px
+                span
+                    font-size: 20px
+                
+        .text-simple
+            margin-top: 10px
+            br
+                display: none
+        .cont
+            flex-direction: column
+            .c-1
+                min-width: 100%
+            .c-2
+                margin-top: 40px
+                min-width: 100%
+
+    .section-catalog_service
+        .cont-content
+            padding-left: 20px
+            padding-right: 20px
+
+    .section-catalog_service-1 
+        .list-block
+            margin-top: 40px
+        .accordion
+            margin-top: 40px
+        .service-row-1 
+            margin-top: 10px
+            flex-direction: column
+         
+            .c-1
+                p
+                    font-size: 16px
+                    margin-bottom: 0
+            .c-2
+                display: none
+            .c-1, .c-2
+                min-width: 100%
+                max-width: 100%

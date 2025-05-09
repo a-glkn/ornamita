@@ -620,7 +620,32 @@ section
     .accordion
         margin-top: calc(var(--px1) * 150)
 
+.section-catalog_service-2
+    .service-row-1
+        justify-content: space-between
+        display: flex
+        .heading
+            margin-bottom: 30px
+        .c-1
+            max-width: calc(var(--px1) * 877)
+            min-width: calc(var(--px1) * 877)
+            padding-right: 40px
+            p
+                font-size: calc(var(--px1) * 24)
+                margin-bottom: 0
+        .c-2
+            max-width: calc(var(--px1) * 633)
+            min-width: calc(var(--px1) * 633)
 
+        .list-block
+            flex-direction: column
+            &__item
+                min-width: 100%
+                max-width: 100%
+    .service-row-2
+        margin-top: 170px
+        .points
+            margin-top: calc(var(--px1) * 72)
 .section-journal-archive
     padding-bottom: calc(var(--px1) * 137)
     background-image: url(../images/dist/bg.jpg)
@@ -1258,13 +1283,32 @@ section
         .service-row-1 
             margin-top: 10px
             flex-direction: column
-         
             .c-1
                 p
-                    font-size: 16px
+                    font-size: 12px
                     margin-bottom: 0
             .c-2
                 display: none
             .c-1, .c-2
                 min-width: 100%
                 max-width: 100%
+
+    .section-catalog_service-2
+        .service-row-1
+            flex-direction: column
+            .heading
+                margin-bottom: 10px
+            .c-1
+                max-width: 100%
+                min-width: 100%
+                padding-right: 0
+                p
+                    font-size: 12px
+            .c-2
+                margin-top: 40px
+                max-width: 100%
+                min-width: 100%
+        .service-row-2
+            margin-top: 100px
+            .points
+                margin-top: 20px

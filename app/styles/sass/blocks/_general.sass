@@ -1330,7 +1330,37 @@ a.char
         &:nth-child(1), &:nth-child(2), &:nth-child(3)
             border-bottom: calc(var(--px1) * 1) solid #54758E
 
-
+.params
+    display: flex
+    gap: calc(var(--px1) * 20)
+    &__item
+        padding: calc(var(--px1) * 50)
+        padding-bottom: calc(var(--px1) * 40)
+        width: 50%
+        background-color: #2E4A5F
+        border: calc(var(--px1) * 1) solid #54758E
+        font-style: normal
+        font-weight: 400
+        font-size: calc(var(--px1) * 20)
+        line-height: 1.25
+        color: #FFFFFF
+        &-heading
+            font-style: normal
+            font-weight: 400
+            font-size: calc(var(--px1) * 40)
+            line-height: 1.225
+            color: #FFFFFF
+            margin-bottom: calc(var(--px1) * 25)
+        &-row
+            font-style: normal
+            font-weight: 700
+            font-size: calc(var(--px1) * 24)
+            line-height: 1.375
+            &:last-child
+                margin-bottom: 0
+        .char
+            margin-bottom: calc(var(--px1) * 10)
+            margin-right: calc(var(--px1) * 5)
 
 .cont-typo
     font-style: normal
@@ -2216,3 +2246,18 @@ a.char
             &:nth-child(3n)
                 padding-right: 0
                 border: 0
+
+
+
+    .params
+        flex-direction: column
+        &__item
+            padding: 30px
+            padding-bottom: 20px
+            font-size: calc(var(--px1) * 16)
+            width: 100%
+            &-heading
+                font-size: 24px
+                margin-bottom: calc(var(--px1) * 10)
+            &-row
+                font-size: calc(var(--px1) * 16)

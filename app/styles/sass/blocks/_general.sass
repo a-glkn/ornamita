@@ -303,6 +303,32 @@ a.char
     display: none
 
 
+.table
+    overflow-y: auto
+    table
+        width: 100%
+        th
+            font-style: normal
+            font-weight: 700
+            font-size: calc(var(--px1) * 20)
+            line-height: 1.25
+            color: #FFFFFF
+            padding-bottom: calc(var(--px1) * 16)
+            border-bottom: calc(var(--px1) * 1) solid #54758E
+        td
+            font-style: normal
+            font-weight: 400
+            font-size: calc(var(--px1) * 20)
+            line-height: 1.25
+            color: #FFFFFF
+            padding-top: calc(var(--px1) * 10)
+            padding-bottom: calc(var(--px1) * 10)
+        tr
+            &:nth-child(2)
+                td
+                    padding-top: calc(var(--px1) * 20)
+
+
 .cat
     display: block
     width: 100%
@@ -1330,6 +1356,19 @@ a.char
         &:nth-child(1), &:nth-child(2), &:nth-child(3)
             border-bottom: calc(var(--px1) * 1) solid #54758E
 
+.tag-accent
+    display: flex
+    justify-content: center
+    align-items: center
+    padding: calc(var(--px1) * 10) calc(var(--px1) * 15)
+    background: #16D1E2
+    font-style: normal
+    font-weight: 400
+    font-size: calc(var(--px1) * 20)
+    line-height: 1.25
+    color: #000000
+
+
 .params
     display: flex
     gap: calc(var(--px1) * 20)
@@ -1344,6 +1383,13 @@ a.char
         font-size: calc(var(--px1) * 20)
         line-height: 1.25
         color: #FFFFFF
+        filter: drop-shadow(0px calc(var(--px1) * 45) calc(var(--px1) * 18) rgba(0, 0, 0, 0.01)) drop-shadow(0px calc(var(--px1) * 25) calc(var(--px1) * 15) rgba(0, 0, 0, 0.05)) drop-shadow(0px calc(var(--px1) * 11) calc(var(--px1) * 11) rgba(0, 0, 0, 0.09)) drop-shadow(0px calc(var(--px1) * 3) calc(var(--px1) * 6) rgba(0, 0, 0, 0.1))
+        hr
+            width: 100%
+            height: calc(var(--px1) * 1)
+            color: #54758E
+            opacity: 1
+            margin: calc(var(--px1) * 50) 0
         &-heading
             font-style: normal
             font-weight: 400
@@ -1351,6 +1397,22 @@ a.char
             line-height: 1.225
             color: #FFFFFF
             margin-bottom: calc(var(--px1) * 25)
+            display: flex
+            justify-content: space-between
+            >
+                *
+                    margin-top: auto
+                    margin-bottom: auto
+        &-content.cont-typo
+            font-size: calc(var(--px1) * 20)
+            > *
+                font-size: calc(var(--px1) * 20)
+            ul > li, p
+                font-size: calc(var(--px1) * 20)
+
+            ul.simple
+                li
+                    margin-bottom: 0
         &-row
             font-style: normal
             font-weight: 700
@@ -1358,6 +1420,14 @@ a.char
             line-height: 1.375
             &:last-child
                 margin-bottom: 0
+
+        &-img
+            display: flex
+            justify-content: space-between
+
+            img
+                width: calc(var(--px1) * 222)
+                height: auto
         .char
             margin-bottom: calc(var(--px1) * 10)
             margin-right: calc(var(--px1) * 5)
@@ -2256,8 +2326,49 @@ a.char
             padding-bottom: 20px
             font-size: calc(var(--px1) * 16)
             width: 100%
+            hr
+                margin: 20px 0
             &-heading
                 font-size: 24px
                 margin-bottom: calc(var(--px1) * 10)
             &-row
                 font-size: calc(var(--px1) * 16)
+
+            &-content.cont-typo
+                font-size: 16px
+                > *
+                    font-size: 16px
+                ul > li, p
+                    font-size: 16px
+
+
+            &-img
+                img
+                    width: 111px
+
+
+    .tag-accent
+        padding: 5px 10px
+        font-size: 16px
+
+
+    .table
+        table
+            th
+                font-size: 16px
+                padding-bottom: calc(var(--px1) * 8)
+            td
+                font-size: 16px
+
+
+@media (max-width: 400px)
+    .params__item-img img
+        width: 90px
+
+    .tag-accent
+        font-size: 12px
+
+    .params__item-heading
+
+        .tag-accent
+            margin-left: 10px

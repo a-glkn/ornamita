@@ -280,6 +280,33 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    if( document.querySelector('.swiper-gallery') ) {
+    
+        new Swiper(".swiper-gallery", {
+            slidesPerView: 1.1,
+            spaceBetween: 10,
+            centeredSlides: true,
+            loop: true,
+            allowTouchMove: true,
+            pagination: {
+                el: ".swiper-gallery .swiper-pagination",
+                type: "fraction"
+            },
+            navigation: {
+                nextEl: ".swiper-gallery .swiper-button-next",
+                prevEl: ".swiper-gallery .swiper-button-prev",
+            },
+
+            breakpoints: {
+                992: {
+                  slidesPerView: 4,
+                  spaceBetween: 30
+                }
+            }
+        });
+    }
+    
+
 
     // Обработчик для открытия попапов при клике на элементы с data-popup
     document.addEventListener('click', (e) => {

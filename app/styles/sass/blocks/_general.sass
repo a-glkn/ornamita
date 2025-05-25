@@ -1064,6 +1064,79 @@ a.char
                 min-width: 50%
                 max-width: 50%
 
+.career-card-grid
+    display: grid
+    gap: calc(var(--px1) * 30)
+    grid-template-columns: repeat(2, 1fr)
+
+.career-card
+    display: flex
+    flex-direction: column
+    padding-left: calc(var(--px1) * 50)
+    padding-right: calc(var(--px1) * 50)
+    padding-bottom: calc(var(--px1) * 50)
+    background: #2E4A5F
+    text-decoration: none
+    border: calc(var(--px1) * 1) solid #54758E
+    backdrop-filter: blur(calc(var(--px1) * 5))
+    filter: drop-shadow(0px calc(var(--px1) * 45) calc(var(--px1) * 18) rgba(0, 0, 0, 0.01)) drop-shadow(0px calc(var(--px1) * 25) calc(var(--px1) * 15) rgba(0, 0, 0, 0.05)) drop-shadow(0px calc(var(--px1) * 11) calc(var(--px1) * 11) rgba(0, 0, 0, 0.09)) drop-shadow(0px calc(var(--px1) * 3) calc(var(--px1) * 6) rgba(0, 0, 0, 0.1))
+    &__top
+        position: relative
+        display: flex
+        padding-right: calc(var(--px1) * 151)
+        min-height: calc(var(--px1) * 191)
+        border-bottom: calc(var(--px1) * 1) solid #54758E
+        .semi-heading
+            margin-top: auto
+            margin-bottom: auto
+    &__content
+        padding-top: calc(var(--px1) * 40)
+    &__text
+        font-style: normal
+        font-weight: 400
+        font-size: calc(var(--px1) * 20)
+        line-height: 1.25
+        color: #FFFFFF
+        margin-top: calc(var(--px1) * 40)
+
+    &__date
+        font-style: normal
+        font-weight: 400
+        font-size: calc(var(--px1) * 16)
+        line-height: 1.25
+        color: rgba(22, 209, 226, 0.64)
+        text-align: right
+        margin-top: calc(var(--px1) * 40)
+    &-arr
+        position: absolute
+        right: calc(var(--px1) * 0)
+        top: 50%
+        width: calc(var(--px1) * 101) 
+        height: calc(var(--px1) * 101) 
+        background-color: #16D1E2
+        border-radius: 50%
+        display: flex
+        transform-origin: 50% 0
+        transform: rotate(-45deg) translateY(-50%)
+        transition: .3s ease
+        svg
+            margin: auto
+            width: calc(var(--px1) * 56)
+            height: calc(var(--px1) * 30)
+            path
+                fill: #000
+                transition: .3s ease
+    &__tags
+        display: flex
+        gap: calc(var(--px1) * 10)
+        margin-bottom: calc(var(--px1) * 10)
+
+    &:hover
+        .career-card
+            &-arr
+                transform: rotate(0) translateY(-50%)
+
+
 .portfolio
     display: grid
     gap: calc(var(--px1) * 30)
@@ -1243,7 +1316,7 @@ a.char
             height: calc(var(--px1) * 33)
     &__text
         font-style: normal
-        font-weight: 700
+        font-weight: 400
         font-size: calc(var(--px1) * 24)
         line-height: 1.3333
         color: #FFFFFF
@@ -1367,6 +1440,29 @@ a.char
     font-size: calc(var(--px1) * 20)
     line-height: 1.25
     color: #000000
+    > * 
+        margin-top: auto
+        margin-bottom: auto
+    svg
+        margin-right: calc(var(--px1) * 10)
+        max-width: calc(var(--px1) * 12)
+
+.tag-simple
+    background: #39576D
+    font-style: normal
+    font-weight: 400
+    font-size: calc(var(--px1) * 20)
+    line-height: 1.25
+    color: #FFFFFF
+    display: flex
+    padding: calc(var(--px1) * 10) calc(var(--px1) * 15)
+    > * 
+        margin-top: auto
+        margin-bottom: auto
+    svg
+        margin-right: calc(var(--px1) * 10)
+        max-width: calc(var(--px1) * 12)
+
 
 
 .params
@@ -2349,8 +2445,16 @@ a.char
 
     .tag-accent
         padding: 5px 10px
-        font-size: 16px
-
+        font-size: 12px
+        svg
+            margin-right: 5px
+            max-width: 9px
+    .tag-simple
+        font-size: 12px
+        padding: 5px 10px
+        svg
+            margin-right: 5px
+            max-width: 9px
 
     .table
         table
@@ -2360,15 +2464,47 @@ a.char
             td
                 font-size: 16px
 
+    .career-card-grid
+        gap: 20px
+        grid-template-columns: repeat(1, 1fr)
+
+    .career-card
+        padding-left: 20px
+        padding-right: 20px
+        padding-bottom: 20px
+        &__top
+            position: relative
+            display: flex
+            padding-right: 60px
+            min-height: 80px
+        &__content
+            padding-top: 20px
+        &__text
+            font-size: 14px
+            margin-top: 20px
+        &__date
+            font-size: 12px
+            margin-top: 30px
+        &-arr
+            width: 40px
+            height: 40px
+            svg
+                margin: auto
+                width: 22px
+                height: 12px
+        &__tags
+            display: flex
+            gap: 5px
+            margin-bottom: 5px
 
 @media (max-width: 400px)
     .params__item-img img
         width: 90px
 
-    .tag-accent
-        font-size: 12px
 
     .params__item-heading
 
         .tag-accent
             margin-left: 10px
+
+    

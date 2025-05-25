@@ -109,15 +109,50 @@
     .breadcrumbs
         position: absolute
         top: 0
-        left: 0
     .cont
         margin-top: auto
         margin-bottom: auto
-    .heading
-        margin-bottom: calc(var(--px1) * 30px)
+        display: flex
+        flex-direction: column
     .semi-heading
         max-width: calc(var(--px1) * 900)
-        margin-bottom: calc(var(--px1) * 75px)
+        padding-top: calc(var(--px1) * 30)
+        padding-bottom: calc(var(--px1) * 75)
+
+.section-career-nums
+    height: calc(var(--px1) * 1000)
+    background-repeat: no-repeat
+    background-position: center
+    background-size: cover
+    display: flex
+    position: relative
+    background-image: url(../images/dist/bg-nums.jpg)
+
+    .num-1
+        max-width: calc(var(--px1) * 913)
+        min-width: calc(var(--px1) * 913)
+        margin-top: calc(var(--px1) * 214)
+        .num__n
+            right: calc(var(--px1) * -20)
+            top: calc(var(--px1) * -215)
+    .num-2
+        margin-top: calc(var(--px1) * 259)
+        max-width: calc(var(--px1) * 867)
+        min-width: calc(var(--px1) * 867)
+        margin-left: calc(var(--px1) * 600)
+        .num__n
+            left: calc(var(--px1) * -140)
+            top: calc(var(--px1) * -262)
+    .num
+        position: relative
+    .num__n
+        position: absolute
+        font-family: 'marby'
+        font-size: calc(var(--px1) * 500)
+        letter-spacing: 2px
+        color: rgba(84, 117, 142, 0.2)
+        line-height: 1
+
 
 .section-products
     padding-top: calc(var(--px1) * 150)
@@ -205,6 +240,31 @@
 
     .btn-mob
         display: none
+
+.section-chars
+    padding-top: calc(var(--px1) * 100)
+    padding-bottom: calc(var(--px1) * 100)
+    .cont
+        display: flex
+        justify-content: space-between
+        .c-1
+            margin-top: auto
+            margin-bottom: auto
+            max-width: calc(var(--px1) * 688)
+            min-width: calc(var(--px1) * 688)
+            .heading
+                margin-bottom: calc(var(--px1) * 30)
+        .c-2
+            max-width: calc(var(--px1) * 633)
+            min-width: calc(var(--px1) * 633)
+            .list-block
+                flex-direction: column
+                width: 100%
+                &__item
+                    min-width: 100%
+                    max-width: 100%
+                    span
+                        line-height: 1.333
 
 .section-contacts
     position: relative
@@ -469,6 +529,53 @@
             line-height: 1.33
             margin-bottom: 0
 
+.section-gallery
+    padding-top: 100px
+    padding-bottom: 100px
+
+.swiper-gallery
+    padding-bottom: 87px
+    position: relative
+    .swiper-slide
+        img
+            max-width: 100%
+            height: auto
+
+    .swiper-button-next, .swiper-button-prev
+        transform: none
+        top: auto
+        position: absolute
+        opacity: 1
+        display: block
+        margin-top: 0
+        width: calc(var(--px1) * 57)
+        height: calc(var(--px1) * 31)
+        z-index: 20
+        cursor: pointer
+        bottom: 0
+        svg
+            position: absolute
+            top: 0  
+            left: 0
+            width: calc(var(--px1) * 57)
+            height: calc(var(--px1) * 31)
+            path
+                fill: #54758E
+        &:after
+            display: none
+
+    .swiper-button-next
+        left: 50%
+        margin-left: calc(var(--px1) * 128)
+    .swiper-button-prev
+        left: 50%
+        margin-left: calc(var(--px1) * -185)
+        
+    .swiper-pagination
+        font-size: calc(var(--px1) * 24)
+        line-height: calc(var(--px1) * 45)
+        bottom: calc(var(--px1) * -5)
+        user-select: none
 
 .section-card
     padding-bottom: calc(var(--px1) * 100)
@@ -493,6 +600,30 @@
     .cont-main
         margin-top: calc(var(--px1) * 50)
 
+    
+.section-career-wrap
+    background-repeat: no-repeat
+    background-position: top center
+    background-size: cover
+    background-image: url(../images/dist/bg-career-2.jpg)
+
+
+.section-career-cat
+    padding-top: calc(var(--px1) * 70)
+    padding-bottom: calc(var(--px1) * 100)
+    .cont-heading
+        display: flex
+        justify-content: space-between
+        > *
+            margin-top: auto
+            margin-bottom: auto
+        .heading
+            max-width: calc(var(--px1) * 1000)
+    .career-card-grid
+        margin-top: calc(var(--px1) * 75)
+
+    .btn-mob
+        display: none
 .section-about
     background-image: url(../images/dist/bg-card-about.jpg)
     background-repeat: no-repeat
@@ -547,6 +678,17 @@ section
     background-repeat: no-repeat
     background-position: center
     background-size: cover
+
+.section-calc
+    text-align: center
+    .btn-arr
+        display: inline-flex
+        margin-left: auto
+        margin-right: auto
+        max-width: calc(var(--px1) * 500)
+        margin-top: calc(var(--px1) * 80)
+        span
+            font-size: calc(var(--px1) * 32)
 
 .section-form-service
     .form
@@ -1469,3 +1611,95 @@ section
                 padding: 30px
                 padding-bottom: 20px
                 padding-top: 20px
+
+
+    .section-intro-career 
+        padding-left: 20px
+        padding-right: 20px
+        height: 475px
+        .breadcrumbs
+            display: none
+
+        .semi-heading
+            padding-top: 10px
+            padding-bottom: 50px
+    .section-career-nums
+        height: auto
+        background-image: url(../images/dist/bg-career-mob.jpg)
+        padding-left: 20px
+        padding-right: 20px
+        padding-top: 126px
+        padding-bottom: 160px
+        .num-1
+            max-width: 100%
+            min-width: 100%
+            margin-top: 0
+            padding-right: 70px
+            .num__n
+                right: 20px
+                top: -80px
+        .num-2
+            margin-top: 87px
+            max-width: 100%
+            min-width: 100%
+            margin-left: 0
+            padding-right: 70px
+            .num__n
+                left: auto
+                top: -80px  
+                right: 0
+       
+        .num__n
+            font-size: 128px
+
+    .section-gallery
+        padding-top: 70px
+        padding-bottom: 70px
+    .swiper-gallery
+        padding-bottom: 0
+        .swiper-button-next, .swiper-button-prev, .swiper-pagination
+            display: none
+
+    .section-chars 
+        padding-top: 90px
+        padding-bottom: 50px
+        .heading
+            margin-bottom: 10px
+        .cont
+            flex-direction: column
+            padding-left: 20px
+            padding-right: 20px
+            p
+                font-size: 14px
+                margin-bottom: 30px
+            .c-1, .c-2
+                max-width: 100%
+                min-width: 100%
+
+    .section-career-cat
+        padding-top: 50px
+        padding-bottom: 70px
+        .cont
+            padding-left: 20px
+            padding-right: 20px
+        .cont-heading
+            max-width: 100%
+            .btn
+                display: none
+
+        .btn-mob
+            margin-top: 30px
+            max-width: 129px
+            display: flex
+            margin-left: auto
+            margin-right: auto
+    .section-calc 
+        .btn-arr
+            font-size: 20px
+            margin-top: 30px
+            span
+                font-size: 20px
+
+    .section-career-cat 
+        .career-card-grid
+            margin-top: 30px

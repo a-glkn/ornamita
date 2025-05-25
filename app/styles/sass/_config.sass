@@ -29,11 +29,18 @@ $px1: 0.0520833333333333vw
 
 @font-face
 	font-family: 'gothic'
+	font-weight: normal
 	src: local('gothic'), url('../fonts/gothic.woff') format('woff')
 
 @font-face
+	font-family: 'gothic'
+	font-weight: bold
+	src: local('gothic'), url('../fonts/centurygothic_bold.ttf') format('ttf')
+
+	
+@font-face
 	font-family: 'marby'
-	src: local('gothic'), url('../fonts/mabry-pro.woff') format('woff')
+	src: local('marby'), url('../fonts/mabry-pro.woff') format('woff')
 
 
 // GENERAL CSS SETTINGS
@@ -59,6 +66,9 @@ input, textarea
 		border-color: red
 	&:required:valid
 		border-color: green
+
+b, strong
+	font-weight: bold
 
 body
 	font-family: $userfont

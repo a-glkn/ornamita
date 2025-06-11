@@ -1,6 +1,6 @@
 .contact
     margin-left: calc(30 * var(--px1))
-    padding-top: calc(27 * var(--px1))
+    padding-top: calc(33 * var(--px1))
     padding-left: calc(15 * var(--px1))
     padding-right: calc(15 * var(--px1))
     border: calc(var(--px1)) solid transparent
@@ -107,42 +107,33 @@
                     background-image: url(../images/dist/wa.png)
     
 .header
-    height: calc(var(--px1) * 189)
+    height: calc(var(--px1) * 179)
     .menu-toggler
         display: none
     .header-top
         display: flex
         justify-content: flex-end
-        > *
-            margin-top: auto
-            margin-bottom: auto
+
     .header-bot
-        padding-top: calc(28 * var(--px1))
+        padding-top: calc(27 * var(--px1))
         display: flex
         transition: .3s ease
-        > *
-            margin-top: auto
-            margin-bottom: auto
+
     a.logo
         display: block
-        width: calc(var(--px1) * 232)
-        min-width: calc(var(--px1) * 232)
+        width: calc(var(--px1) * 188)
+        min-width: calc(var(--px1) * 188)
         height: auto
-        margin-right: calc(var(--px1) * 20)
+        margin-right: calc(var(--px1) * 45)
+        position: relative
+        top: calc(var(--px1) * -27)
         svg
             width: 100%
             height: auto
-    
-
-
-        
-
-
 
     .lang
-        margin-top: calc(19 * var(--px1))
-        margin-left: calc(var(--px1) * 81)
-
+        margin-top: calc(27 * var(--px1))
+        margin-left: calc(81 * var(--px1))
     .menu
         ul
             display: flex
@@ -172,7 +163,7 @@
                         color: #000
 
     .search
-        margin-left: calc(var(--px1) * 152)
+        margin-left: auto
         display: flex
         .search-form
             position: relative
@@ -208,8 +199,7 @@
             width: calc(var(--px1) * 30)
             height: calc(var(--px1) * 31)
             position: relative
-            margin-top: auto
-            margin-bottom: auto
+            margin-top: 10px
             cursor: pointer
             svg
                 width: 100%
@@ -464,7 +454,7 @@
             max-width: 122px
             position: absolute
             left: 20px
-            top: 20px
+            top: 15px
         .menu, .search
             display: none !important
    

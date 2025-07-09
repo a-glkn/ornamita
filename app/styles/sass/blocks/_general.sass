@@ -10,6 +10,8 @@
     font-size: calc(var(--px1) * 64)
     text-transform: uppercase
     line-height: 1.21875
+    &-smaller
+        font-size: calc(var(--px1) * 48)
 
 .tooltip
     cursor: pointer
@@ -344,7 +346,7 @@ a.char
         left: 0
         width: 100%
         height: 100%
-        opacity: 0
+        opacity: 0.5
         transition: opacity .6s ease
     &__title
         font-style: normal
@@ -1715,6 +1717,8 @@ a.char
         font-size: 20px
     .heading
         font-size: 32px !important
+        &-smaller
+            font-size: 24px !important
     .grid-products
         display: flex
         flex-direction: column

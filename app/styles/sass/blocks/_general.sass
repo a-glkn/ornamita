@@ -542,11 +542,11 @@ a.char
     display: grid
     grid-template-columns: repeat(3, 1fr)
     grid-template-rows: repeat(2, 1fr)
-    gap: 0
+    gap: calc(var(--px1) * 30)
     .item
         display: flex
-        width: calc(var(--px1) * 503.3333333)
-        height: calc(var(--px1) * 503.3333333)
+        width: 100%
+        height: calc(var(--px1) * 483)
         margin: 0
         line-height: 1
         .heading
@@ -1701,6 +1701,7 @@ a.char
     .grid-products
         display: flex
         flex-direction: column
+        gap: 0
         .item
             width: 100%
             height: auto

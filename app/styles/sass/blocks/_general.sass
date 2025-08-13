@@ -462,9 +462,12 @@ a.char
     flex-direction: column
     color: #fff
     &__img
+        height: calc(var(--px1) * 250)
         img
+            display: block
             width: 100%
-            height: auto
+            height: 100%
+            object-fit: cover
     &__date
         font-size: calc(var(--px1) * 12)
         line-height: calc(var(--px1) * 15)
@@ -520,6 +523,7 @@ a.char
                 width: 50%
                 min-width: 50%
                 max-width: 50%
+                height: auto
             &__content
                 position: relative
                 padding-left: calc(var(--px1) * 50)
@@ -1808,6 +1812,8 @@ a.char
             font-size: 8px
     .card
         padding-bottom: 61px
+        &__img
+            height: 175px
         &__content
             padding-top: 15px
             padding-left: 15px

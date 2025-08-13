@@ -1186,7 +1186,7 @@ a.char
             z-index: 1
             position: absolute
             right: calc(var(--Hpx1) * 50)
-            bottom: calc(var(--Hpx1) * 50)
+            top: 50%
             width: calc(var(--Hpx1) * 101) 
             height: calc(var(--Hpx1) * 101) 
             background-color: #16D1E2
@@ -1194,7 +1194,7 @@ a.char
             display: flex
             transform: rotate(-45deg)
             transition: .3s ease
-            transition: .3s
+            margin-top: calc(var(--Hpx1) * -50)
             svg
                 margin: auto
                 width: calc(var(--Hpx1) * 56)
@@ -1211,6 +1211,9 @@ a.char
             padding-right: calc(var(--Hpx1) * 201)
         &-img
             position: relative
+            max-height: calc(var(--px1) * 587)
+            min-height: calc(var(--px1) * 587)
+            height: calc(var(--px1) * 587)
             .catalog-tag
                 position: absolute
                 top: calc(var(--px1) * 30)
@@ -1218,6 +1221,9 @@ a.char
             img
                 max-width: 100%
                 height: auto
+                width: 100%
+                height: 100%
+                object-fit: cover
         .semi-heading
             line-height: 1.225
             margin-top: auto
@@ -2197,6 +2203,9 @@ a.char
                     width: 28px
                     height: 15px
             &-img
+                min-height: 398px
+                max-height: 398px
+                height: 398px
                 .catalog-tag
                     top: 20px
                     right: 20px

@@ -406,6 +406,61 @@ a.char
         color: #000
 
 
+.cout-grid
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    grid-gap: calc(var(--px1) * 31) calc(var(--px1) * 50)
+    width: 100%
+    .item 
+        aspect-ratio: 1
+        background: #eee
+        display: block
+        position: relative
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+            display: block
+            transition: transform 0.3s ease
+        &__overlay
+            position: absolute
+            width: 100%
+            height: 100%
+            top: 0
+            left: 0
+            right: 0
+            bottom: 0
+            cursor: pointer
+            flex-direction: column
+            display: flex
+            background: rgba(0,0,0,0.46)
+            text-align: center
+            opacity: 0
+            transition: .3s ease
+        &__seria
+            margin-top: auto
+            font-family: $userfont
+            font-style: normal
+            font-weight: 400
+            font-size: calc(var(--px1) * 12)
+            line-height: calc(var(--px1) * 32)
+            color: #FFFFFF
+        &__heading
+            margin-bottom: auto
+            font-family: $userfont
+            font-style: normal
+            font-weight: 700
+            font-size: calc(var(--px1) * 18)
+            line-height: calc(var(--px1) * 32)
+            color: #FFFFFF
+        &:hover
+            .item
+                &__overlay
+                    opacity: 1
+
+
+
+
 .site
     display: flex
     border: calc(var(--px1) * 1) solid #54758E
@@ -2496,7 +2551,8 @@ a.char
             display: flex
             gap: 5px
             margin-bottom: 5px
-
+    .cout-grid
+        grid-gap: 20px 20px
 @media (max-width: 400px)
     .params__item-img img
         width: 90px

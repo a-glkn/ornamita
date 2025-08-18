@@ -420,6 +420,9 @@
         background: none
         padding-bottom: calc(var(--px1) * 100)
         background: linear-gradient(180deg, #0C2334 0%, #264259 100%)
+    &_vars
+        background: #0c2334
+        padding-bottom: calc(var(--px1) * 100)
     .slider-projects
         padding-bottom: calc(var(--px1) * 98)
     .swiper-pagination
@@ -458,6 +461,7 @@
         left: calc(var(--px1) * 556)
 
     .slide
+        margin-bottom: calc(var(--px1) * 50)
         display: flex
         border: calc(var(--px1)) solid #54758E
         .heading-mob
@@ -486,6 +490,22 @@
             background-repeat: no-repeat
             background-position: center
             background-size: cover
+
+    &_vars
+        .slide
+            margin-bottom: calc(var(--px1) * 50)
+            &:last-child
+                margin-bottom: 0
+            .c-1
+                height: calc(var(--px1) * 702)
+            .c-2    
+                padding-top: calc(var(--px1) * 35)
+                padding-bottom: calc(var(--px1) * 35)
+                padding-left: calc(var(--px1) * 35)
+                padding-right: calc(var(--px1) * 35)
+                height: calc(var(--px1) * 702)
+            .text
+                margin-top: calc(var(--px1) * 56)
 
 .section-features
     background-color: #0C2334
@@ -1179,7 +1199,24 @@ section
             margin-left: -87px
         .swiper-button-next
             margin-left: 58px
-
+        &_vars
+            .slide
+                .c-1
+                    min-width: 100%
+                    max-width: 100%
+                    padding-top: 30px
+                    padding-left: 20px
+                    padding-right: 20px
+                    padding-bottom: 20px
+                    height: auto
+                .c-2
+                    padding-top: 0
+                    padding-bottom: 20px
+                    padding-left: 20px
+                    padding-right: 20px
+                    min-width: 100%
+                    max-width: 100%
+                    height: auto
     .section-journal
         padding-top: 70px
         padding-bottom: 70px

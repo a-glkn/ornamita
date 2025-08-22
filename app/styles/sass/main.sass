@@ -6,8 +6,7 @@
 
 .section-intro
     display: flex
-    height: 100vh
-    min-height: 600px
+    height: calc(100vh - var(--px1) * 179)
     background-repeat: no-repeat
     background-position: center
     background-size: cover
@@ -27,8 +26,8 @@
             background-repeat: no-repeat
             background-position: center
             background-size: cover
-            min-height: calc(var(--px1) * 872)
-            max-height: calc(var(--px1) * 872)
+            min-height: 100%
+            max-height: 100%
             top: 50%
             transform: translateY(-50%)
             transition: .5s ease
@@ -467,7 +466,7 @@
         .heading-mob
             display: none
         .text
-            margin-top: calc(var(--px1) * 152)
+            margin-top: calc(var(--Hpx1) * 60)
             width: calc(var(--px1) * 500)
         .btn-link
             position: absolute
@@ -476,7 +475,7 @@
         .c-1
             min-width: calc(var(--px1) * 765)
             max-width: calc(var(--px1) * 765)
-            height: calc(var(--px1) * 787)
+            height: calc(var(--Hpx1) * 787)
             padding-top: calc(var(--px1) * 50)
             padding-left: calc(var(--px1) * 50)
             padding-bottom: calc(var(--px1) * 50)
@@ -486,7 +485,7 @@
         .c-2
             min-width: calc(var(--px1) * 745)
             max-width: calc(var(--px1) * 745)
-            height: calc(var(--px1) * 787)
+            height: calc(var(--Hpx1) * 787)
             background-repeat: no-repeat
             background-position: center
             background-size: cover

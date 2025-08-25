@@ -1183,7 +1183,7 @@ a.char
 .portfolio
     display: grid
     gap: calc(var(--px1) * 30)
-    grid-template-columns: repeat(2, 1fr)
+    grid-template-columns: repeat(3, 1fr)
     &__item
         background: #2E4A5F
         border: calc(var(--px1) * 1) solid #54758E
@@ -1216,7 +1216,7 @@ a.char
                     transition: .3s ease
         
         &-title
-            min-height: calc(var(--Hpx1) * 372)
+            min-height: calc(var(--Hpx1) * 320)
             padding: calc(var(--Hpx1) * 50)
             .text
                 p:last-child
@@ -1231,7 +1231,7 @@ a.char
 .catalog
     display: grid
     gap: calc(var(--px1) * 30)
-    grid-template-columns: repeat(2, 1fr)
+    grid-template-columns: repeat(3, 1fr)
     &-tag
         font-style: normal
         font-weight: 400
@@ -1267,10 +1267,12 @@ a.char
 
         &-heading
             position: relative
-            min-height: calc(var(--Hpx1) * 237)
+            min-height: calc(var(--Hpx1) * 200)
             display: flex
             padding-left: calc(var(--Hpx1) * 50)
             padding-right: calc(var(--Hpx1) * 201)
+            .semi-heading
+                font-size: calc(var(--Hpx1) * 32)
         &-img
             position: relative
             max-height: calc(var(--Hpx1) * 587)
@@ -1302,6 +1304,7 @@ a.char
             background: rgba(46, 74, 95, 0.7)
             backdrop-filter: blur(5px)
             padding: calc(var(--px1) * 50)
+            grid-column: 1 / 4
         &.cont-typo
             b
                 display: block
@@ -1727,10 +1730,17 @@ a.char
                 height: auto
 
 +media-breakpoint-down(xl)
- 
+
    
 +media-breakpoint-down(lg)
+    .catalog
+        grid-template-columns: repeat(2, 1fr)
+        &__item
+            &_text
+                grid-column: auto
 
+    .portfolio
+        grid-template-columns: repeat(2, 1fr)
 +media-breakpoint-down(md)
     
    
@@ -1837,7 +1847,7 @@ a.char
     .sub-heading
         font-size: 20px
     .semi-heading
-        font-size: 20px
+        font-size: 20px !important
     .text, blockquote
         padding-top: 15px
         padding-left: 15px

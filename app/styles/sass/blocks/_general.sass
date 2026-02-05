@@ -1463,6 +1463,18 @@ a.char
         padding-right: calc(var(--px1) * 30)
         padding-top: calc(var(--px1) * 50)
         padding-bottom: calc(var(--px1) * 50)
+        text-decoration: none
+        position: relative
+        &-arr
+            position: absolute
+            top: calc(var(--px1) * 50)
+            right: calc(var(--px1) * 40)
+            width: calc(var(--px1) * 20)
+            height: calc(var(--px1) * 20)
+            background-repeat: no-repeat
+            background-position: 0 0
+            background-image: url(../images/dist/arr.svg)
+            background-size: calc(var(--px1) * 20) calc(var(--px1) * 20)
         &-num
             font-style: normal
             font-weight: 400
@@ -1487,6 +1499,14 @@ a.char
         &:nth-child(1), &:nth-child(2), &:nth-child(3)
             border-bottom: calc(var(--px1) * 1) solid #54758E
 
+        &_edge
+            padding-left: calc(var(--px1) * 30)
+    a.points__item
+        transition: .3s ease
+        &:hover
+            background-color: #2E4A5F
+        
+            
 .tag-accent
     display: flex
     justify-content: center
@@ -1526,6 +1546,7 @@ a.char
 .params
     display: flex
     gap: calc(var(--px1) * 20)
+
     &__item
         padding: calc(var(--px1) * 50)
         padding-bottom: calc(var(--px1) * 40)
@@ -1544,6 +1565,13 @@ a.char
             color: #54758E
             opacity: 1
             margin: calc(var(--px1) * 50) 0
+        &-text
+            font-style: normal
+            font-weight: 400
+            font-size: calc(var(--Hpx1) * 24)
+            line-height: 1.33333
+            display: flex
+            color: #FFFFFF
         &-heading
             font-style: normal
             font-weight: 400
@@ -1585,7 +1613,13 @@ a.char
         .char
             margin-bottom: calc(var(--px1) * 10)
             margin-right: calc(var(--px1) * 5)
-
+    &_wrap
+        flex-wrap: wrap
+        .params
+            &__item
+                width: calc(50% - var(--px1) * 10)
+                padding-bottom: calc(var(--px1) * 50)
+                
 .cont-typo
     font-style: normal
     font-weight: 400
@@ -2582,6 +2616,17 @@ a.char
 
     .heading-smaller
         font-size: 24px !important
+    .params_wrap 
+        .params__item
+            width: 100% 
+    .params__item-text
+        font-size: 14px
+    .points__item-arr
+        width: 12px
+        height: 12px
+        right: 20px
+        top: 6px   
+        background-size: 12px 12px        
 @media (max-width: 400px)
     .params__item-img img
         width: 90px

@@ -118,6 +118,30 @@
         padding-top: calc(var(--px1) * 30)
         padding-bottom: calc(var(--px1) * 75)
 
+.section-service-new
+    height: calc(var(--px1) * 818)
+    background-repeat: no-repeat
+    background-position: center
+    background-size: cover
+    display: flex
+    position: relative
+    .breadcrumbs
+        position: absolute
+        top: 0
+    .cont
+        margin-top: auto
+        margin-bottom: auto
+        display: flex
+        flex-direction: column
+    .heading
+        max-width: calc(var(--px1) * 1013)
+    .semi-heading
+        max-width: calc(var(--px1) * 720)
+        padding-top: calc(var(--px1) * 20)
+        padding-bottom: calc(var(--px1) * 100)
+
+
+
 .section-career-nums
     height: calc(var(--px1) * 1000)
     background-repeat: no-repeat
@@ -691,7 +715,7 @@ section
             flex-direction: column
 
 
-.section-calc, .section-form-service
+.section-calc, .section-form-service, .section-service-end
     padding-top: calc(var(--px1) * 150)
     padding-bottom: calc(var(--px1) * 150)
     background-image: url(../images/dist/bg-calc.jpg)
@@ -709,6 +733,26 @@ section
         margin-top: calc(var(--Hpx1) * 80)
         span
             font-size: calc(var(--Hpx1) * 32)
+
+.section-service-end
+    .heading
+        margin-top: calc(var(--Hpx1) * 150)
+
+    .btns-row
+        margin-top: calc(var(--Hpx1) * 50)
+        display: flex
+        justify-content: space-between
+        gap: calc(var(--px1) * 20)
+        .btn-arr
+            width: 100%
+            box-shadow: none
+            span
+                font-size: calc(var(--Hpx1) * 40)
+            svg
+                min-width: calc(var(--Hpx1) * 56)
+                max-width: calc(var(--Hpx1) * 56)
+                min-height: calc(var(--Hpx1) * 30)
+                max-height: calc(var(--Hpx1) * 30)
 
 .section-form-service
     .form
@@ -781,6 +825,60 @@ section
 
     .accordion
         margin-top: calc(var(--px1) * 150)
+
+
+.section-catalog_service-new
+    background-position: top center
+    background-image: url(../images/dist/bg-career-2.jpg)
+    padding-bottom: calc(var(--px1) * 120)
+    .service-row-1
+        margin-top: 0
+        justify-content: space-between
+        display: flex
+        .c-1
+            max-width: calc(var(--px1) * 700)
+            min-width: calc(var(--px1) * 700)
+            .heading
+                margin-bottom: calc(var(--px1) * 30)
+            p
+                font-size: calc(var(--px1) * 24)
+                margin-bottom: 0
+
+        .btn-arr
+            margin-top: calc(var(--px1) * 18)
+            width: calc(var(--px1) * 512)
+                
+    .list-block
+        margin-top: calc(var(--px1) * 50) 
+
+    .params-row
+        margin-top: calc(var(--px1) * 150)
+        .params
+            margin-top: calc(var(--px1) * 50)
+    .calc-form
+        margin-top: calc(var(--px1) * 50)
+        padding: calc(var(--px1) * 50)
+        justify-content: space-between
+        .c-1
+            min-width: 63.5%
+            max-width: 63.5%
+            padding: 0
+        .c-2
+            min-width: 27.6%
+            max-width: 27.6%
+            padding: 0
+
+        .form
+            &__input
+                margin-bottom: 0
+            .btn-arr
+                margin-top: calc(var(--px1) * 50)
+    .apply-row
+        margin-top: calc(var(--px1) * 265)
+        .heading
+            margin-bottom: calc(var(--px1) * 50)
+    .swiper-gallery
+            margin-top: calc(var(--px1) * 100)
 
 .section-catalog_service-2
     .service-row-1
@@ -1746,3 +1844,89 @@ section
     .section-products
         .heading
             text-align: center
+
+    .section-service-new
+        padding-left: 20px
+        padding-right: 20px
+        height: 475px
+        .breadcrumbs
+            display: none
+
+        .semi-heading
+            padding-top: 10px
+            padding-bottom: 50px        
+
+    .section-catalog_service-new 
+        .service-row-1 
+            .btn-arr
+                display: none
+            .c-1 
+                max-width: 100%
+                min-width: 100%
+                p
+                    font-size: 14px   
+
+        .list-block
+            margin-top: 30px                 
+
+        .calc-form 
+            padding: 30px
+            .heading
+                text-align: center
+                font-size: 28px !important
+                br
+                    display: none
+            .semi-heading
+                text-align: center
+                br
+                    display: none        
+            .c-1
+                text-align: center
+                margin-left: auto
+                margin-right: auto
+                min-width: 100%
+                max-width: 100%
+            .c-2
+                min-width: 100%
+                max-width: 100%    
+            .form 
+                .btn-arr
+                    margin-top: 20px     
+        .params-row
+            margin-top: 50px
+            .params
+                margin-top: 30px
+        .points__item
+            padding-bottom: 10px
+        .apply-row
+            margin-top: 100px
+
+        .swiper-gallery
+            margin-top: 75px            
+    .section-calc 
+        .btn-arr
+            max-width: none        
+
+    .section-service-end
+        padding-top: 75px
+        padding-bottom: 75px
+        .params__item
+            padding: 30px !important
+        .btns-row
+            margin-top: 20px
+            flex-direction: column
+            .btn-arr 
+                svg
+                    max-height: 15px
+                    max-width: 28px
+                    min-height: 15px
+                    min-width: 28px
+                span
+                    font-size: 14px
+        .cont
+            padding-left: 20px
+            padding-right: 20px    
+
+        .heading
+            margin-top: 50px
+            font-size: 24px !important    

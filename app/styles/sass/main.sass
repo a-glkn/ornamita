@@ -990,6 +990,8 @@ section
             border: calc(var(--px1) * 1) solid #54758E
             padding: calc(var(--px1) * 50)
     
+
+
 .section-journal-archive
     padding-bottom: calc(var(--px1) * 137)
     background-image: url(../images/dist/bg.jpg)
@@ -1072,12 +1074,41 @@ section
     .cont-tags
         display: none !important
 
+.section-catalog_search
+    .heading-row
+        border-bottom: 0
+        padding-bottom: calc(var(--px1) * 50)
+        .cont-heading
+            display: flex
+            justify-content: flex-start
+
+        .search-heading
+            margin-left: calc(var(--px1) * 57)
+    .cont-content
+        padding-top: calc(var(--px1) * 20)
+    .sort-row
+        display: flex  
+        gap: calc(var(--px1) * 100)
+        margin-bottom: calc(var(--px1) * 55)
+        >
+            *
+                margin-top: auto
+                margin-bottom: auto
+        .search-found
+            display: flex
+            gap: 15px
+            font-style: normal
+            font-weight: 400
+            font-size: calc(var(--px1) * 13)
+            line-height: 1.54
+            color: #FFFFFF
+
 +media-breakpoint-down(xl)
   
 +media-breakpoint-down(lg)
   
 +media-breakpoint-down(md)
-
+    
         
 +media-breakpoint-down(sm)
     .btn-arr
@@ -1930,3 +1961,19 @@ section
         .heading
             margin-top: 50px
             font-size: 24px !important    
+
+    .section-catalog_search
+        .heading-row
+            .search-heading
+                margin-left: 30px
+        .cont-content
+            padding-top: 0
+            padding-left: 20px
+            padding-right: 20px     
+
+        .sort-row
+            gap: 10px
+            margin-bottom: 30px
+            flex-direction: column
+            .search-found
+                gap: 10px      

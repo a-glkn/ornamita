@@ -1764,6 +1764,119 @@ a.char
                 width: 100%
                 height: auto
 
+.search-result
+    display: block
+    color: #fff !important
+    text-decoration: none
+    padding: calc(var(--px1) * 30)
+    margin-bottom: calc(var(--px1) * 10)
+    background-color: #2E4A5F
+    padding-right: calc(var(--px1) * 100)
+    border: calc(var(--px1) * 1) solid #54758E
+    position: relative
+    transition: .3s ease
+    &__title    
+        font-style: normal
+        font-weight: 400
+        font-size: calc(var(--px1) * 36)
+        line-height: 0.95
+        margin-bottom: calc(var(--px1) * 10)
+        transition: .3s ease
+    &__text
+        font-style: normal
+        font-weight: 400
+        font-size: calc(var(--px1) * 18)
+        line-height: 1.5
+        color: #FFFFFF
+        transition: .3s ease
+    &__date 
+        margin-top: calc(var(--px1) * 10)
+        font-style: normal
+        font-weight: 700
+        font-size: calc(var(--px1) * 16)
+        line-height: 1.5
+        color: #FFFFFF
+        transition: .3s ease
+    &__arr
+        position: absolute
+        right: calc(var(--px1) * 30)
+        top: calc(var(--px1) * 30)
+        transition: .3s ease
+        svg
+            width: calc(var(--px1) * 43)
+            height: calc(var(--px1) * 43)
+            transition: .3s ease
+            path, rect
+                fill: #fff
+                transition: .3s ease
+    &:hover
+        background-color: #16D1E2
+        
+
+.search-heading
+    position: relative
+    max-width: calc(var(--px1) * 750)
+    width: 100%
+    &__input
+        background-color: #2E4A5F
+        padding-left: calc(var(--px1) * 30)
+        padding-right: calc(var(--px1) * 90)
+        font-family: $userfont
+        font-style: normal
+        font-weight: 400
+        font-size: calc(var(--px1) * 24)
+        line-height: 1.21
+        height: calc(var(--px1) * 90)
+        width: 100%
+        color: #FFFFFF
+        border: 1px solid #54758E
+        &::placeholder
+            color: #fff
+    &__submit
+        border: 0
+        width: calc(var(--px1) * 30)
+        height: calc(var(--px1) * 31)
+        position: absolute
+        right: calc(var(--px1) * 30)
+        top: 50%
+        background-color: transparent
+        transform: translateY(-50%)
+        svg
+            width: calc(var(--px1) * 30)
+            height: calc(var(--px1) * 31)
+            position: absolute
+            top: 0
+            left: 0
+
+.sort
+    display: flex
+    gap: 15px
+    span
+        font-style: normal
+        font-weight: 400
+        font-size: calc(var(--px1) * 13)
+        line-height: 1.54
+        color: #FFFFFF
+    > *
+        margin-top: auto
+        margin-bottom: auto
+    select
+        height: calc(var(--px1) * 40)
+        border-radius: 0
+        border: calc(var(--px1) * 1) solid #54758E !important
+        padding-left: calc(var(--px1) * 15)
+        padding-right: calc(var(--px1) * 15)
+        color: #fff
+        font-size: calc(var(--px1) * 13)
+        outline: none !important
+        -webkit-appearance: none
+        -moz-appearance: none
+        appearance: none
+        background-color: #2E4A5F !important
+        background-image: url(../images/dist/arr-sel-wh.svg)
+        background-repeat: no-repeat
+        background-position: right calc(var(--px1) * 15) center
+        background-size: calc(var(--px1) * 15) calc(var(--px1) * 19)
 +media-breakpoint-down(xl)
 
    
@@ -2626,7 +2739,46 @@ a.char
         height: 12px
         right: 20px
         top: 6px   
-        background-size: 12px 12px        
+        background-size: 12px 12px     
+
+
+    .search-heading
+        &__input
+            padding-left: 15px
+            padding-right: 45px
+            font-size: 16px
+            height: 45px
+            width: 100%
+        &__submit
+            border: 0
+            width: 15px
+            height: 15.5px
+            right: 15px
+            position: absolute
+            svg
+                position: absolute
+                top: 0
+                left: 0
+                width: 15px
+                height: 15.5px 
+
+
+    .search-result
+        padding: 20px
+        padding-right: 60px
+        border-width: 1px
+        &__title    
+            font-size: 24px
+        &__text
+            font-size: 16px
+        &__date 
+            font-size: 14px
+        &__arr
+            right: 15px
+            top: 15px
+            svg
+                width: 30px
+                height: 30px
 @media (max-width: 400px)
     .params__item-img img
         width: 90px
